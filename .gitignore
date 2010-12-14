@@ -1,0 +1,11 @@
+*.aux
+*.pdf
+*.log
+*.lo*
+*.a*
+*.toc
+*.ou*
+*.html
+!*.tex
+sample.tex
+chapter/
