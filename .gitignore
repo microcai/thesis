@@ -11,3 +11,5 @@ sample.tex
 chapter/
 *.dvi
 *#
+*.b*
+*.ps
