@@ -8,6 +8,16 @@
 \usepackage{makecell}
 \usepackage{fancybox}
 
+\usepackage{color}
+\makeatletter
+\renewcommand\tableofcontents{%
+\section*{开题报告目录(全文附后)}%\contentsname
+%\@mkboth{%
+%\MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+{\color{black}%
+\@starttoc{toc}}%
+}\makeatother
+
 %\usepackage[style=plaintop]{floatrow}
 
 \setlength{\parindent}{24pt}
@@ -64,7 +74,6 @@
      \hline
 
 	\multicolumn{4}{|m{\textwidth-14pt}|}{
-		\textbf{开题报告目录(全文附后)}
 		\tableofcontents
 	} \\       
     \hline          
