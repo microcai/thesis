@@ -12,14 +12,31 @@
 
 \usepackage{color}
 
+\newcommand\CJK{
+
+\setmainfont{SimSun}
+
+\XeTeXlinebreaklocale{zh}
+\XeTeXlinebreakskip=0pt plus 1pt
+\XeTeXlinebreakpenalty=0
+} 
+
+\newcommand\TimeNewRoman{
+
+%\setromanfont[Mapping=tex-text]{AR PL UMing CN}
+\setmainfont{Times New Roman}
+%\fontfamily{文泉驿等宽正黑}\selectfont{}
+
+\XeTeXlinebreaklocale{en-us}
+\XeTeXlinebreakskip=0em plus 0.1em minus 0.01em
+\XeTeXlinebreakpenalty=0
+} 
+
 \makeatletter
 
 \renewcommand{\contentsname}{开题报告目录(全文附后)}
-%\renewcommand{\refname}{{\CJK{参考文献}}}
 
 \renewenvironment{thebibliography}[1]{%
-%     \section{\refname}%
-%      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
       \list{\@biblabel{\@arabic\c@enumiv}}%
            {\settowidth\labelwidth{\@biblabel{#1}}%
             \leftmargin\labelwidth
@@ -49,42 +66,22 @@
   \setlength{\oddsidemargin}{0.26cm}   % 左边 3.25cm=0.71+2.54
 \setlength{\evensidemargin}{0.26cm}
     
-\newcommand\CJK{
 
-\setmainfont{SimSun}
-\setromanfont{SimSun}
-
-\XeTeXlinebreaklocale{zh}
-\XeTeXlinebreakskip=0pt plus 1pt
-\XeTeXlinebreakpenalty=0
-
-} 
-
-\newcommand\TimeNewRoman{
-
-%\setromanfont[Mapping=tex-text]{AR PL UMing CN}
-\setmainfont{Times New Roman}
-%\fontfamily{文泉驿等宽正黑}\selectfont{}
-
-\XeTeXlinebreaklocale{en-us}
-\XeTeXlinebreakskip=0em plus 0.1em minus 0.01em
-\XeTeXlinebreakpenalty=0
-
-} 
 
 %\usepackage{tableau}
 
 \title{浙江理工大学外国语学院英语专业本科毕业论文开题报告}
 \author{microcai}
 
-  	 \renewcommand{\arraystretch}{1.8}
+\renewcommand{\arraystretch}{1.8}
 
 \begin{document}
-
+{
 \begin{CJK}
 \fontsize{15}{15.00}
 \selectfont{}\textbf{浙江理工大学外国语学院英语专业本科毕业论文开题报告}
 \end{CJK}
+}
 
 \begin{table}[h]
  \begin{CJK}
@@ -114,13 +111,14 @@
   \end{tabular}
  \end{CJK} 
 \end{table}
-\CJK{
+
+\begin{CJK}
 \section{选题意义与可行性分析}
-}
+\end{CJK}
 
 \begin{CJK}
 
-进入新时代，人和人交流更多了。但是语言仍然是无阻碍交流里不可逾越的鸿沟，为了跨过这个鸿沟，我们花费了太多代价。
+进入新时代，\textbf{人}和\normalfont{人}交流更多了。\textit{但是}语言仍然是无阻碍交流里不可逾越的鸿沟，为了跨过这个鸿沟，我们花费了太多代价。
 无数的书籍、文献亟待翻译。人力资源不仅短缺，也很昂贵。
 无数先锋开发出了多种数学模型试图翻译，很多确实在工作的特别好。但是，要用一个数学模型去做翻译，缺点太多。
 语言不是简单的能用公式就表达的清楚的。不是简单的用一个数学模型去隐射就能翻译的。
@@ -138,9 +136,9 @@
 
 \end{CJK}
 
-\CJK{
+\begin{CJK}
 \section{研究的基本内容与拟解决的主要问题}
-}
+\end{CJK}
 
 \begin{CJK}
 
@@ -155,9 +153,9 @@
 
 \end{CJK}
 
-\CJK{
+\begin{CJK}
 \section{总体研究思路及预期研究成果}
-}
+\end{CJK}
 
 \begin{CJK}
 
@@ -180,9 +178,9 @@
 
 \end{CJK}
 
-\CJK{
+\begin{CJK}
 \section{研究工作计划}
-}
+\end{CJK}
 
 \begin{CJK}
 年底前拜读机器翻译大师的作品，找到一些前人已经有的功能，避免重复发明轮子。
@@ -190,12 +188,13 @@
 次年3月完成Demo和论文。
 \end{CJK}
 
-\CJK{
-\section{参考文献}	
-}
+\begin{CJK}
+\section{参考文献}
+\end{CJK}
 
+\TimeNewRoman{
 \bibliography{../thesisbib}
-
 \bibliographystyle{plain}
+}
 
 \end{document}
