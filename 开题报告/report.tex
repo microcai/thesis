@@ -1,6 +1,7 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[ urlcolor = blue, colorlinks = true, citecolor = black, linkcolor = black]{hyperref}
 \usepackage{fontspec}
+\usepackage[BoldFont]{xeCJK}
 \usepackage{graphicx}
 %\usepackage{xltxtra}
 \usepackage{fancyhdr}
@@ -11,6 +12,9 @@
 \usepackage{natbib}
 
 \usepackage{color}
+
+
+\setCJKmainfont{宋体}
 
 \newcommand\CJK{
 
@@ -76,15 +80,13 @@
 \renewcommand{\arraystretch}{1.8}
 
 \begin{document}
+
 {
-\begin{CJK}
 \fontsize{15}{15.00}
 \selectfont{}\textbf{浙江理工大学外国语学院英语专业本科毕业论文开题报告}
-\end{CJK}
 }
 
 \begin{table}[h]
- \begin{CJK}
   \begin{tabular}{|m{55pt}|m{180pt}|m{55pt}|m{80pt}|} 
 %  	 {
   	  \hline
@@ -109,17 +111,12 @@
 	      } & 	\multicolumn{1}{b{30pt}|}{ \textbf{签名}  }\\
      \hline
   \end{tabular}
- \end{CJK} 
 \end{table}
 
-\begin{CJK}
 \section{选题意义与可行性分析}
-\end{CJK}
 
-\begin{CJK}
-
-进入新时代，\textbf{人}和\normalfont{人}交流更多了。\textit{但是}语言仍然是无阻碍交流里不可逾越的鸿沟，为了跨过这个鸿沟，我们花费了太多代价。
-无数的书籍、文献亟待翻译。人力资源不仅短缺，也很昂贵。
+进入新时代，人和人交流更多了。但是语言仍然是无阻碍交流里不可逾越的鸿沟，为了跨过这个鸿沟，
+我们花费了太多代价。无数的书籍、文献亟待翻译。人力资源不仅短缺，也很昂贵。
 无数先锋开发出了多种数学模型试图翻译，很多确实在工作的特别好。但是，要用一个数学模型去做翻译，缺点太多。
 语言不是简单的能用公式就表达的清楚的。不是简单的用一个数学模型去隐射就能翻译的。
 要正确的进行翻译，源文本的意思必须要被理解。
@@ -134,13 +131,7 @@
 和汉语不一样，英语具有非常严格的语法，每个句子都是非常完整的，很有逻辑。只有固定的几个句式，
 每个句式的各个部分又可以嵌套进别的句式形成复合句型，非常适合用关系树去表达。
 
-\end{CJK}
-
-\begin{CJK}
 \section{研究的基本内容与拟解决的主要问题}
-\end{CJK}
-
-\begin{CJK}
 
 本文旨在研究从英语生成语法树并对语法树进行汉语表达的可能性。
 
@@ -151,13 +142,7 @@
 
 %TODO 查一下我最近看的到底是哪篇文章讲解了这一过程，加入文献引用库
 
-\end{CJK}
-
-\begin{CJK}
 \section{总体研究思路及预期研究成果}
-\end{CJK}
-
-\begin{CJK}
 
 句子不是词语的堆砌。一个句子是有语法在里面的。 
 如果完整的解析一个句子的意思，生成另一个中间语言。这个中间语言被叫做元语言。 在内存中可以用一个抽象语法树完整表达。
@@ -176,21 +161,13 @@
 
 预期做出一个Demo完成翻译任务。
 
-\end{CJK}
-
-\begin{CJK}
 \section{研究工作计划}
-\end{CJK}
 
-\begin{CJK}
 年底前拜读机器翻译大师的作品，找到一些前人已经有的功能，避免重复发明轮子。
 次年开始构筑翻译Demo
 次年3月完成Demo和论文。
-\end{CJK}
 
-\begin{CJK}
 \section{参考文献}
-\end{CJK}
 
 \TimeNewRoman{
 \bibliography{../thesisbib}
