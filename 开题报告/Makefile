@@ -1,4 +1,4 @@
-SOURCE=report.tex
+SOURCE=report.tex report.bib
 PDF=report.pdf
 HTML=report.html
 
