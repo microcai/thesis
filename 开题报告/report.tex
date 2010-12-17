@@ -7,11 +7,36 @@
 \usepackage{booktabs}
 \usepackage{makecell}
 \usepackage{fancybox}
+\usepackage{bibentry}
+\usepackage{natbib}
 
 \usepackage{color}
+
 \makeatletter
 
 \renewcommand{\contentsname}{开题报告目录(全文附后)}
+%\renewcommand{\refname}{{\CJK{参考文献}}}
+
+\renewenvironment{thebibliography}[1]{%
+%     \section{\refname}%
+%      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
 
 %\usepackage[style=plaintop]{floatrow}
 
@@ -105,6 +130,7 @@
 
 这一方面编译器就做的很到位。高级语言本身已经很接近人类语言了，编译器依然能够理解并翻译成机器语言。
 这种翻译是一种精确的翻译。人类的言语可以使用这样的模型翻译么？
+ \cite{Compilers_Principles_Techniques_and_Tools}
 
 可以，至少相当数量的句子是可以的。为何不去试一试呢？或者是，拿英语作为试验的对象。
 和汉语不一样，英语具有非常严格的语法，每个句子都是非常完整的，很有逻辑。只有固定的几个句式，
@@ -165,12 +191,11 @@
 \end{CJK}
 
 \CJK{
-\section{参考文献}
+\section{参考文献}	
 }
 
-\CJK{
-编译原理
-Lex 和 Yacc
-}
+\bibliography{../thesisbib}
+
+\bibliographystyle{plain}
 
 \end{document}
