@@ -1,6 +1,5 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[ urlcolor = blue, colorlinks = true, citecolor = black, linkcolor = black]{hyperref}
-\usepackage{fontspec}
 \usepackage[BoldFont]{xeCJK}
 \usepackage{graphicx}
 %\usepackage{xltxtra}
@@ -10,35 +9,22 @@
 \usepackage{fancybox}
 \usepackage{bibentry}
 \usepackage{natbib}
-
+\usepackage{longtable}
+\usepackage{array}
 \usepackage{color}
 
-
-\setCJKmainfont{宋体}
-
-\newcommand\CJK{
-
-\setmainfont{SimSun}
-
-\XeTeXlinebreaklocale{zh}
-\XeTeXlinebreakskip=0pt plus 1pt
-\XeTeXlinebreakpenalty=0
-} 
-
-\newcommand\TimeNewRoman{
-
-%\setromanfont[Mapping=tex-text]{AR PL UMing CN}
-\setmainfont{Times New Roman}
-%\fontfamily{文泉驿等宽正黑}\selectfont{}
-
 \XeTeXlinebreaklocale{en-us}
-\XeTeXlinebreakskip=0em plus 0.1em minus 0.01em
-\XeTeXlinebreakpenalty=0
-} 
+\setmainfont{Times New Roman}
+\setCJKmainfont{宋体}
+\setCJKfamilyfont{song}{宋体}
+
+\punctstyle{CCT}
+
 
 \makeatletter
 
 \renewcommand{\contentsname}{开题报告目录(全文附后)}
+%\renewcommand{\sectionsname}{开题报告目录(全文附后)}
 
 \renewenvironment{thebibliography}[1]{%
       \list{\@biblabel{\@arabic\c@enumiv}}%
@@ -78,7 +64,7 @@
 \author{microcai}
 
 \renewcommand{\arraystretch}{1.8}
-
+ 
 \begin{document}
 
 {
@@ -86,16 +72,13 @@
 \selectfont{}\textbf{浙江理工大学外国语学院英语专业本科毕业论文开题报告}
 }
 
-\begin{table}[h]
-  \begin{tabular}{|m{55pt}|m{180pt}|m{55pt}|m{80pt}|} 
-%  	 {
+\begin{table}[here]
+ \begin{tabular}{|m{55pt}|m{180pt}|m{55pt}|m{80pt}|}
   	  \hline
      \makecell{\textbf{班级}} & \makecell{\textbf{07英语(2)班}} & \makecell{\textbf{姓名}} &  				\makecell{\textbf{蔡万钊}}  \\
      \hline
      \textbf{课题名称} & \multicolumn{3}{c|}{ \textbf{基于语义分析的自动翻译}	} \\
      \hline 
-     
-%     }
 
 	\multicolumn{4}{|m{\textwidth-14pt}|}{
 		\tableofcontents
@@ -104,14 +87,18 @@
     
     \textbf{成绩} & \multicolumn{3}{l|}{} \\
     \hline
-    \makecell{\textbf{答辩}\\\textbf{意见} } & \textbf{答辩组长签名} & 
+    \makecell{\textbf{答辩}\\\textbf{意见} } & \makecell{答辩组长签名:\\\\   年\space 月 日} & 
 	     \makecell{ 
 	     	\\\\\textbf{系}\\\textbf{主}\\\textbf{任}\\
 	     	\textbf{审}\\\textbf{核}\\ \textbf{意}\\\textbf{见}\\\\
-	      } & 	\multicolumn{1}{b{30pt}|}{ \textbf{签名}  }\\
+	      } & 	\multicolumn{1}{b{30pt}|}{ 签名  }\\
      \hline
   \end{tabular}
-\end{table}
+\end{table} 
+
+{
+
+\linespread{1.5}
 
 \section{选题意义与可行性分析}
 
@@ -167,11 +154,11 @@
 次年开始构筑翻译Demo
 次年3月完成Demo和论文。
 
+}
+
 \section{参考文献}
 
-\TimeNewRoman{
 \bibliography{../thesisbib}
 \bibliographystyle{plain}
-}
 
 \end{document}
