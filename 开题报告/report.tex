@@ -12,6 +12,7 @@
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{color}
+\usepackage{setspace}
 
 \XeTeXlinebreaklocale{en-us}
 \setmainfont{Times New Roman}
@@ -87,18 +88,19 @@
     
     \textbf{成绩} & \multicolumn{3}{l|}{} \\
     \hline
-    \makecell{\textbf{答辩}\\\textbf{意见} } & \makecell{答辩组长签名:\\\\   年\space 月 日} & 
+    \makecell{\textbf{答辩}\\\textbf{意见} } & 
+    	\makecell{答辩组长签名:\\\\\\   \qquad{}年\quad 月\quad 日} & 
 	     \makecell{ 
 	     	\\\\\textbf{系}\\\textbf{主}\\\textbf{任}\\
 	     	\textbf{审}\\\textbf{核}\\ \textbf{意}\\\textbf{见}\\\\
-	      } & 	\multicolumn{1}{b{30pt}|}{ 签名  }\\
+	      } &
+	      
+		 \makecell{签名\\\\\\\qquad{}年\quad 月\quad 日} \\
      \hline
   \end{tabular}
 \end{table} 
 
-{
-
-\linespread{1.5}
+\begin{onehalfspace}
 
 \section{选题意义与可行性分析}
 
@@ -154,7 +156,7 @@
 次年开始构筑翻译Demo
 次年3月完成Demo和论文。
 
-}
+\end{onehalfspace}
 
 \section{参考文献}
 
