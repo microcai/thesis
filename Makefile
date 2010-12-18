@@ -4,12 +4,12 @@ HTML=MachineTranslate.html
 
 INTERMEDIAFILE=MachineTranslate.aux MachineTranslate.log MachineTranslate.out
 
-XeLaTeX=xelatex
+LaTeX=latex
 
 all:$(PDF)
 
 $(INTERMEDIAFILE) $(PDF):$(SOURCE) 
-	$(XeLaTeX) -interaction=nonstopmode $(SOURCE)
+	$(LaTeX) -interaction=nonstopmode $(SOURCE)
 	$(RM) $(INTERMEDIAFILE)
 clean:
 	$(RM) $(INTERMEDIAFILE) $(PDF)
