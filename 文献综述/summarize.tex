@@ -4,17 +4,36 @@
 %\usepackage{xltxtra}
 \usepackage{fancyhdr}
 \usepackage{booktabs}
-\usepackage{indentfirst}
 \usepackage{CJK}
 \usepackage{array}
 \usepackage{makecell}
+\usepackage{natbib}
 
-\setlength{\parindent}{24pt}
- \setlength{\parskip}{3pt plus1pt minus2pt}
- \setlength{\baselineskip}{20pt plus2pt minus1pt}
+\renewenvironment{thebibliography}[1]{%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+
+%\setlength{\parindent}{24pt}
+% \setlength{\parskip}{3pt plus1pt minus2pt}
+% \setlength{\baselineskip}{20pt plus2pt minus1pt}
 % \setlength{\textheight}{21.5true cm}
  \setlength{\textwidth}{15true cm}
-  \setlength{\headsep}{10truemm}
+%  \setlength{\headsep}{10truemm}
   \setlength{\oddsidemargin}{0.26cm}   % 左边 3.25cm=0.71+2.54
 \setlength{\evensidemargin}{0.26cm}
 
