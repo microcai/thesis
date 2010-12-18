@@ -45,12 +45,12 @@
 \setlength{\evensidemargin}{0.26cm}
 
 
-\newcommand{\SONG}[1]{
+\newcommand{\SONG}[1]{%
 {%
-\begin{CJK}{UTF8}{gbsn}
+\begin{CJK}{UTF8}{gbsn}%
 #1%
 \end{CJK}%
-}}
+}}%
 
 \renewcommand{\arraystretch}{1.8}
 
@@ -63,7 +63,7 @@
 
 
 \begin{CJK}{UTF8}{gbsn}
-\fontsize{15.1}{15.1}
+\fontsize{15.2}{15.2}
 \textbf{浙江理工大学外国语学院英语专业本科毕业论文文献综述}\\
 \end{CJK}
 
@@ -76,7 +76,7 @@
 	\hline
 	\endfirsthead
 	
-     {\SONG{姓名}} & {\SONG{蔡万钊}} & {\SONG{班级}} &
+     {\SONG{姓名}} & {\SONG{蔡万钊}} &{\quad\SONG{班级}\quad} &
        {07\SONG{英语}(2)\SONG{班}} & {{\SONG{指导老师}}} & {{\SONG{黄海军}}}  \\
      \hline
      \SONG{论文题目} & \multicolumn{5}{c|}{\textbf{\SONG{基于语义分析的自动翻译}}} \\
@@ -86,31 +86,17 @@
 
 	\multicolumn{6}{|m{420pt}|}{ 
 	
-	\begin{onehalfspace}
-\section{Introduction}
-
-As moving to a new age, people tend to need more communication. Filling the gap between different cultures requires translating countless books, articles and words. Human resource is always a limitation. Thousands of 
-pioneers have developed a serious of Mathematical model for doing translation mechanically. 
-
-Much of the previous model employ too much mathematics, focus not enough to the true meaning of the words.
-Translate is not a simple mapping from source language to target language. In order to do perfect translation,
-the true meaning of the words must be understood. 
-
-
-\section{Body}
-\section{Conclusion}
-\section{Bibliography}
-\end{onehalfspace}	
-
+		\begin{onehalfspace}	
+		\input{summarize_body}		
+		\end{onehalfspace}
 	 } \\  
 	
 	\newpage
 
-	\multicolumn{6}{|c|}{} \\
+	\multicolumn{6}{|c|}{ \makecell{ }} \\
     \multicolumn{1}{|l}{\SONG{成绩}} & \multicolumn{5}{l|}{} \\
     
-	\multicolumn{6}{|c|}{} \\
-	\multicolumn{6}{|c|}{} \\
+	\multicolumn{6}{|c|}{\makecell{\\}} \\
 		
 	\multicolumn{2}{|l}{\SONG{指导教师审阅意见} } 	& \multicolumn{4}{l|}{}  \\
 
