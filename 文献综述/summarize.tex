@@ -6,14 +6,77 @@
 \usepackage{booktabs}
 \usepackage{indentfirst}
 \usepackage{CJK}
- 
+\usepackage{array}
+\usepackage{makecell}
+
+\setlength{\parindent}{24pt}
+ \setlength{\parskip}{3pt plus1pt minus2pt}
+ \setlength{\baselineskip}{20pt plus2pt minus1pt}
+% \setlength{\textheight}{21.5true cm}
+ \setlength{\textwidth}{15true cm}
+  \setlength{\headsep}{10truemm}
+  \setlength{\oddsidemargin}{0.26cm}   % 左边 3.25cm=0.71+2.54
+\setlength{\evensidemargin}{0.26cm}
+
+
+\newcommand{\SONG}[1]{
+{%
+\begin{CJK}{UTF8}{gbsn}
+#1%
+\end{CJK}%
+}}
+
+\renewcommand{\arraystretch}{1.8}
+
+\renewcommand{\contentsname}{ Contents (Full Text Appended)}
 
 \title{Lexical Analyse Based Translation Program}
 \author{microcai}
 
 \begin{document}
 
-\part*{Introduction}
+
+\begin{CJK}{UTF8}{gbsn}
+\fontsize{14}{14}
+\textbf{浙江理工大学外国语学院英语专业本科毕业论文文献综述}
+\end{CJK}
+
+\begin{table}[here]
+ \begin{tabular}{|c|c|c|c|c|c|}
+  	  \hline
+     \textbf{\SONG{姓名}} & \textbf{\SONG{蔡万钊}} & \textbf{\SONG{班级}} &
+     	\makecell{\textbf{07\SONG{英语}(2)\SONG{班}}} & \makecell{\textbf{\SONG{指导老师}}} &  				\makecell{\textbf{\SONG{黄海军}}}  \\
+     \hline
+     \textbf{\SONG{论文题目}} & \multicolumn{5}{c|}{\textbf{\SONG{基于语义分析的自动翻译}}} \\
+     \hline 
+     \textbf{Thesis Title} & \multicolumn{5}{c|}{\textbf{Lexical Analyse Based Translation Program}} \\    
+     \hline
+
+	\multicolumn{6}{|m{300pt}|}{ 
+		\tableofcontents	
+	 } \\       
+	
+
+	\multicolumn{6}{|c|}{} \\
+	\multicolumn{6}{|c|}{} \\
+    \multicolumn{1}{|l}{\SONG{成绩}} & \multicolumn{5}{l|}{} \\
+    
+	\multicolumn{6}{|c|}{} \\
+	\multicolumn{6}{|c|}{} \\
+		
+	\multicolumn{2}{|l}{\SONG{指导教师审阅意见} } 	& \multicolumn{4}{l|}{}  \\
+
+	\multicolumn{6}{|l|}{} \\
+
+	\multicolumn{4}{|c}{} & \multicolumn{2}{l|}{\SONG{指导教师签名\underline{\qquad\qquad\qquad}}} \\
+	
+    \hline
+  \end{tabular}
+\end{table} 
+
+\newpage
+
+\section{Introduction}
 
 As moving to a new age, people tend to need more communication. Filling the gap between different cultures requires translating countless books, articles and words. Human resource is always a limitation. Thousands of 
 pioneers have developed a serious of Mathematical model for doing translation mechanically. 
@@ -22,9 +85,10 @@ Much of the previous model employ too much mathematics, focus not enough to the 
 Translate is not a simple mapping from source language to target language. In order to do perfect translation,
 the true meaning of the words must be understood. 
 
-\begin{CJK}{UTF8}{gbsn}
-的
-\end{CJK}
+
+\section{Body}
+\section{Conclusion}
+\section{Bibliography}
 
 
 \end{document}
