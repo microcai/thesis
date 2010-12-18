@@ -7,9 +7,18 @@ Much of the previous model employ too much mathematics, focus not enough to the 
 Translate is not a simple mapping from source language to target language. In order to do perfect translation,
 the true meaning of the words must be understood. 
 
-\cite{Compilers_Principles_Techniques_and_Tools}
+Makeing a computer program understand a string is the so called Lexical Analyse. 
+When Lexical Analyse finished, the given string will be converted into a abstract syntax tree. 
+This tree represents the internal meaning and structure of the analysed string. Since it's a data struct, programs 
+will find it more easier to do further analyse.\cite{Compilers_Principles_Techniques_and_Tools}
+
+Befor doing the Lexcial Analyse, the string should be tokenized and the every token should be marked by it's part of speech.
+This process is called, syntax analyse.
+
+Tokenize can be performemed by regular expasion, mostly part of speech can be done by simply lookup in the dictionary. However
 
 \section{Body}
+
 \section{Conclusion}
 \section{Bibliography}
 
