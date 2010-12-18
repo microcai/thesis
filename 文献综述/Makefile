@@ -1,0 +1,20 @@
+SOURCE=summarize
+PDF=$(SOURCE).pdf
+HTML=$(SOURCE).html
+
+INTERMEDIAFILE=missfont.log $(SOURCE).aux $(SOURCE).log $(SOURCE).out $(SOURCE).toc $(SOURCE).bbl $(SOURCE).blg  $(SOURCE).dvi
+
+LaTeX=xelatex
+BiBTeX=bibtex
+
+all:$(PDF)
+
+$(INTERMEDIAFILE) $(PDF):$(SOURCE).tex ../thesisbib.bib
+	$(RM) $(INTERMEDIAFILE)
+	$(LaTeX) -interaction=nonstopmode $(SOURCE)
+	$(LaTeX) -interaction=nonstopmode $(SOURCE)
+#	$(BiBTeX) $(SOURCE)
+#	$(LaTeX) -interaction=nonstopmode $(SOURCE)
+#	$(LaTeX) -interaction=nonstopmode $(SOURCE)
+clean:
+	$(RM) $(INTERMEDIAFILE) $(PDF)
