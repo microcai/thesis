@@ -13,6 +13,7 @@
 \usepackage{array}
 \usepackage{color}
 \usepackage{setspace}
+\usepackage{sectsty}
 
 \XeTeXlinebreaklocale{en-us}
 \setmainfont{Times New Roman}
@@ -78,7 +79,7 @@
   	  \hline
      \makecell{\textbf{班级}} & \makecell{\textbf{07英语(2)班}} & \makecell{\textbf{姓名}} &  				\makecell{\textbf{蔡万钊}}  \\
      \hline
-     \textbf{课题名称} & \multicolumn{3}{c|}{ \textbf{基于语义分析的自动翻译}\cite{统计机器翻译}	} \\
+     \textbf{课题名称} & \multicolumn{3}{c|}{ \textbf{基于语义分析的自动翻译} } \\
      \hline 
 
 	\multicolumn{4}{|m{\textwidth-14pt}|}{
@@ -101,6 +102,8 @@
 \end{table} 
 
 \begin{onehalfspace}
+
+\sectionfont{\fontsize{12}{12}\selectfont\textbf}
 
 \section{选题意义与可行性分析}
 
@@ -138,7 +141,7 @@
 这个元语言必须是图灵完全而且是自描述的。 
 
 然后再依据元语言，构造符合目标语言语法的，语义一致的一系列语句。 
-接着使用统计模型，从中选择一条最有可能，正确的概率最大的作为最终的翻译结果。 
+接着使用统计模型，从中选择一条最有可能，正确的概率最大的作为最终的翻译结果。 \cite{统计机器翻译}
 
 所以，机器翻译就被分解成几个子任务了。 
 
