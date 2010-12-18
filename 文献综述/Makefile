@@ -9,12 +9,12 @@ BiBTeX=bibtex
 
 all:$(PDF)
 
-$(INTERMEDIAFILE) $(PDF):$(SOURCE).tex ../thesisbib.bib
+$(INTERMEDIAFILE) $(PDF):$(SOURCE).tex ../thesisbib.bib summarize_body.tex
 	$(RM) $(INTERMEDIAFILE)
 	$(LaTeX) -interaction=nonstopmode $(SOURCE)
 	$(LaTeX) -interaction=nonstopmode $(SOURCE)
-#	$(BiBTeX) $(SOURCE)
-#	$(LaTeX) -interaction=nonstopmode $(SOURCE)
-#	$(LaTeX) -interaction=nonstopmode $(SOURCE)
+	$(BiBTeX) $(SOURCE)
+	$(LaTeX) -interaction=nonstopmode $(SOURCE)
+	$(LaTeX) -interaction=nonstopmode $(SOURCE)
 clean:
 	$(RM) $(INTERMEDIAFILE) $(PDF)
