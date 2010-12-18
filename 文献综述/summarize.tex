@@ -1,13 +1,19 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[ urlcolor = blue, colorlinks = true, citecolor = black, linkcolor = black]{hyperref}
-%\usepackage{graphicx}
+\usepackage{graphicx}
 %\usepackage{xltxtra}
+\usepackage{fancybox}
+\usepackage{bibentry}
+\usepackage{natbib}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{color}
+\usepackage{setspace}
 \usepackage{fancyhdr}
 \usepackage{booktabs}
 \usepackage{CJK}
 \usepackage{array}
 \usepackage{makecell}
-\usepackage{natbib}
 \usepackage{setspace}
 \usepackage{supertabular}
 \usepackage{longtable}
@@ -15,7 +21,9 @@
 \usepackage[bf, tiny]{titlesec}
     \titleformat{\section}{\bf}{\thesection{}. }{0.24em}{}
     \titlespacing{\section}{0cm}{*1.5}{*1.1}
-    
+
+\makeatletter    
+
 \renewenvironment{thebibliography}[1]{%
       \list{\@biblabel{\@arabic\c@enumiv}}%
            {\settowidth\labelwidth{\@biblabel{#1}}%
@@ -46,6 +54,13 @@
 
 
 \newcommand{\SONG}[1]{%
+{%
+\begin{CJK}{UTF8}{gbsn}%
+#1%
+\end{CJK}%
+}}%
+
+\newcommand{\cjk}[1]{%
 {%
 \begin{CJK}{UTF8}{gbsn}%
 #1%

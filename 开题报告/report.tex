@@ -28,8 +28,12 @@
 \setCJKmainfont{Adobe Song Std}
 \setCJKfamilyfont{song}{Adobe Song Std}
 
-\punctstyle{CCT}
+\newcommand{\cjk}[1]{%
+{%
+#1%
+}}%
 
+\punctstyle{CCT}
 
 \makeatletter
 
@@ -149,7 +153,7 @@
 这个元语言必须是图灵完全而且是自描述的。 
 
 然后再依据元语言，构造符合目标语言语法的，语义一致的一系列语句。 
-接着使用统计模型，从中选择一条最有可能，正确的概率最大的作为最终的翻译结果。 \cite{统计机器翻译}
+接着使用统计模型，从中选择一条最有可能，正确的概率最大的作为最终的翻译结果。 \cite{STATMT}
 
 所以，机器翻译就被分解成几个子任务了。 
 
