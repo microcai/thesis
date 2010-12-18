@@ -2,7 +2,7 @@
 \usepackage[ urlcolor = blue, colorlinks = true, citecolor = black, linkcolor = black]{hyperref}
 \usepackage[BoldFont,SlantFont]{xeCJK}
 \usepackage{graphicx}
-%\usepackage{xltxtra}
+\usepackage{xltxtra}
 \usepackage{fancyhdr}
 \usepackage{booktabs}
 \usepackage{makecell}
@@ -13,12 +13,20 @@
 \usepackage{array}
 \usepackage{color}
 \usepackage{setspace}
-\usepackage{sectsty}
+
+\usepackage[bf, tiny]{titlesec}
+    \titleformat{\section}{\bf}{\thesection{}. }{0.24em}{}
+    \titlespacing{\section}{0cm}{*1.5}{*1.1}
+
+
+
+%！！重要！！%这是防止 - -- --- 等特殊符号失去在 LaTeX 下原油的意义。
+\defaultfontfeatures{Mapping=tex-text}
 
 \XeTeXlinebreaklocale{en-us}
 \setmainfont{Times New Roman}
-\setCJKmainfont{宋体}
-\setCJKfamilyfont{song}{宋体}
+\setCJKmainfont{Adobe Song Std}
+\setCJKfamilyfont{song}{Adobe Song Std}
 
 \punctstyle{CCT}
 
@@ -102,8 +110,6 @@
 \end{table} 
 
 \begin{onehalfspace}
-
-\sectionfont{\fontsize{12}{12}\selectfont\textbf}
 
 \section{选题意义与可行性分析}
 
