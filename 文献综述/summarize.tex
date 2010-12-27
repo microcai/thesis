@@ -1,122 +1,78 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[ urlcolor = blue, colorlinks = true, citecolor = black, linkcolor = black]{hyperref}
-\usepackage{graphicx}
 %\usepackage{xltxtra}
-\usepackage{fancybox}
-\usepackage{bibentry}
-\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
 \usepackage{setspace}
-\usepackage{CJK}
-\usepackage{array}
-\usepackage{makecell}
-\usepackage{longtable}
+\usepackage{array,makecell,booktabs}
+
+\pagestyle{fancy}
+
+%\rfoot{ \includegraphics[height=\headheight]{../zstu} }
+\rhead{\tiny\entitle}
+
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\headwidth}{\textwidth}
+
+\sloppy
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{../thesis_common}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[bf, tiny]{titlesec}
     \titleformat{\section}{\bf}{\thesection{}. }{0.24em}{}
     \titlespacing{\section}{0cm}{*1.5}{*1.1}
 
-\makeatletter    
-
-\renewenvironment{thebibliography}[1]{%
-      \list{\@biblabel{\@arabic\c@enumiv}}%
-           {\settowidth\labelwidth{\@biblabel{#1}}%
-            \leftmargin\labelwidth%
-            \advance\leftmargin\labelsep%
-            \@openbib@code%
-            \usecounter{enumiv}%
-            \let\p@enumiv\@empty%
-            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-      \sloppy%
-      \clubpenalty4000%
-      \@clubpenalty \clubpenalty%
-      \widowpenalty4000%
-      \sfcode`\.\@m}%
-     {\def\@noitemerr%
-       {\@latex@warning{Empty `thebibliography' environment}}%
-      \endlist}%
-\makeatother
-
-%\setlength{\parindent}{24pt}
-% \setlength{\parskip}{3pt plus1pt minus2pt}
-% \setlength{\baselineskip}{20pt plus2pt minus1pt}
-% \setlength{\textheight}{21.5true cm}
- \setlength{\textwidth}{15true cm}
-%  \setlength{\headsep}{10truemm}
-  \setlength{\oddsidemargin}{0.26cm}   % 左边 3.25cm=0.71+2.54
-\setlength{\evensidemargin}{0.26cm}
-
-
 \newcommand{\SONG}[1]{%
 {%
-\begin{CJK}{UTF8}{gbsn}%
+%\begin{CJK}{UTF8}{gbsn}%
 #1%
-\end{CJK}%
+%\end{CJK}%
 }}%
 
 \newcommand{\cjk}[1]{%
 {%
-\begin{CJK}{UTF8}{gbsn}%
+%\begin{CJK}{UTF8}{gbsn}%
 #1%
-\end{CJK}%
+%\end{CJK}%
 }}%
 
 \renewcommand{\arraystretch}{1.8}
 
-\renewcommand{\contentsname}{ Contents (Full Text Appended)}
+%\setromanfont{Times New Roman}
 
-\title{Lexical Analyse Based Translation Program}
-\author{microcai}
 
 \begin{document}
+\input{summarize_table}
 
 
-\begin{CJK}{UTF8}{gbsn}
-\fontsize{15.2}{15.2}
-\textbf{浙江理工大学外国语学院英语专业本科毕业论文文献综述}\\
-\end{CJK}
+\begin{onehalfspace}
 
+\input{summarize_body}		
 
-\begin{longtable}{|c|c|c|c|c|c|}
-	\hline
-	\endhead
-	\hline
-	\endfoot
-	\hline
-	\endfirsthead
-	
-     {\SONG{姓名}} & {\SONG{蔡万钊}} &{\quad\SONG{班级}\quad} &
-       {07\SONG{英语}(2)\SONG{班}} & {{\SONG{指导老师}}} & {{\SONG{黄海军}}}  \\
-     \hline
-     \SONG{论文题目} & \multicolumn{5}{c|}{\textbf{\SONG{基于语义分析的自动翻译}}} \\
-     \hline 
-     {Thesis Title} & \multicolumn{5}{c|}{\textbf{Lexical Analyse Based Translation Program}} \\    
-     \hline
+\section{Bibliography}
 
-	\multicolumn{6}{|m{420pt}|}{ 
-	
-		\begin{onehalfspace}	\par
-		\input{summarize_body}		
-		\end{onehalfspace}
-	 } \\  
-	 
-	\multicolumn{6}{|m{420pt}|}{ 
-	\section{Bibliography}
-	\bibliography{../thesisbib}
-	\bibliographystyle{plain}	
-	} \\
-		
-	\multicolumn{6}{|c|}{ \makecell{ }} \\
-    \multicolumn{1}{|l}{\SONG{成绩}} & \multicolumn{5}{l|}{} \\
+\bibliography{../reference.bib}
+\bibliographystyle{plain}
+
+\end{onehalfspace}
+
+\begin{table}[b]
+\begin{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}c|c|c|c|c|c}
+    \multicolumn{1}{l}{\SONG{成绩}} & \multicolumn{5}{l}{} \\
     
-	\multicolumn{6}{|c|}{\makecell{\\}} \\
+	\multicolumn{6}{c}{\makecell{\\}} \\
 		
-	\multicolumn{2}{|l}{\SONG{指导教师审阅意见} } 	& \multicolumn{4}{l|}{}  \\
+	\multicolumn{2}{l}{\SONG{指导教师审阅意见} } 	& \multicolumn{4}{l}{}  \\
 
-	\multicolumn{6}{|l|}{} \\
+	\multicolumn{6}{l}{} \\
 
-	\multicolumn{4}{|c}{} & \multicolumn{2}{l|}{\SONG{指导教师签名\underline{\hspace{3cm}}}} \\
+	\multicolumn{4}{c}{} & \multicolumn{2}{l}{\SONG{指导教师签名\underline{\hspace{3cm}}}} \\
 
-	\multicolumn{6}{|r|}{ \SONG{年}\quad \SONG{月}\quad \SONG{日}} \\
-	\end{longtable}
-
+	\multicolumn{6}{r}{ 年\quad 月\quad 日}\\\bottomrule
+\end{tabular*}
+\end{center}
+\end{table}
 \end{document}
+
