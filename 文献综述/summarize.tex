@@ -5,17 +5,10 @@
 \usepackage{fancybox}
 \usepackage{bibentry}
 \usepackage{natbib}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{color}
 \usepackage{setspace}
-\usepackage{fancyhdr}
-\usepackage{booktabs}
 \usepackage{CJK}
 \usepackage{array}
 \usepackage{makecell}
-\usepackage{setspace}
-\usepackage{supertabular}
 \usepackage{longtable}
 
 \usepackage[bf, tiny]{titlesec}
@@ -27,20 +20,20 @@
 \renewenvironment{thebibliography}[1]{%
       \list{\@biblabel{\@arabic\c@enumiv}}%
            {\settowidth\labelwidth{\@biblabel{#1}}%
-            \leftmargin\labelwidth
-            \advance\leftmargin\labelsep
-            \@openbib@code
+            \leftmargin\labelwidth%
+            \advance\leftmargin\labelsep%
+            \@openbib@code%
             \usecounter{enumiv}%
-            \let\p@enumiv\@empty
+            \let\p@enumiv\@empty%
             \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-      \sloppy
-      \clubpenalty4000
-      \@clubpenalty \clubpenalty
+      \sloppy%
+      \clubpenalty4000%
+      \@clubpenalty \clubpenalty%
       \widowpenalty4000%
-      \sfcode`\.\@m}
-     {\def\@noitemerr
+      \sfcode`\.\@m}%
+     {\def\@noitemerr%
        {\@latex@warning{Empty `thebibliography' environment}}%
-      \endlist}
+      \endlist}%
 \makeatother
 
 %\setlength{\parindent}{24pt}
@@ -101,13 +94,17 @@
 
 	\multicolumn{6}{|m{420pt}|}{ 
 	
-		\begin{onehalfspace}	
+		\begin{onehalfspace}	\par
 		\input{summarize_body}		
 		\end{onehalfspace}
 	 } \\  
-	
-	\newpage
-
+	 
+	\multicolumn{6}{|m{420pt}|}{ 
+	\section{Bibliography}
+	\bibliography{../thesisbib}
+	\bibliographystyle{plain}	
+	} \\
+		
 	\multicolumn{6}{|c|}{ \makecell{ }} \\
     \multicolumn{1}{|l}{\SONG{成绩}} & \multicolumn{5}{l|}{} \\
     
@@ -117,11 +114,9 @@
 
 	\multicolumn{6}{|l|}{} \\
 
-	\multicolumn{4}{|c}{} & \multicolumn{2}{l|}{\SONG{指导教师签名\underline{\qquad\qquad\qquad}}} \\
+	\multicolumn{4}{|c}{} & \multicolumn{2}{l|}{\SONG{指导教师签名\underline{\hspace{3cm}}}} \\
 
 	\multicolumn{6}{|r|}{ \SONG{年}\quad \SONG{月}\quad \SONG{日}} \\
-	
-    \hline
-\end{longtable}
+	\end{longtable}
 
 \end{document}

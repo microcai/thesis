@@ -2,7 +2,7 @@ SOURCE=summarize
 PDF=$(SOURCE).pdf
 HTML=$(SOURCE).html
 
-INTERMEDIAFILE=missfont.log $(SOURCE).aux $(SOURCE).log $(SOURCE).out $(SOURCE).toc $(SOURCE).bbl $(SOURCE).blg  $(SOURCE).dvi
+INTERMEDIAFILE=missfont.log $(SOURCE).aux $(SOURCE).log $(SOURCE).out $(SOURCE).toc $(SOURCE).bbl $(SOURCE).blg  $(SOURCE).dvi $(SOURCE).idv $(SOURCE).lg $(SOURCE).ps
 
 LaTeX=latex
 BiBTeX=bibtex
