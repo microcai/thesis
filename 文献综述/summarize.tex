@@ -5,18 +5,17 @@
 
 \usepackage[xetex]{graphicx}
 \usepackage[xdvipdfmx]{pstricks}
-\usepackage{fancyhdr}
+%\usepackage{fancyhdr}
 \usepackage{setspace}
 \usepackage{array,makecell,booktabs}
+\usepackage{wrapfig}
+\usepackage{longtable}
 
-\pagestyle{fancy}
+%\pagestyle{fancy}
 
 
 %\rfoot{ \includegraphics[height=\headheight]{../zstu} }
-\rhead{\tiny\entitle}
-
-\renewcommand{\headrulewidth}{0.1pt}
-\renewcommand{\headwidth}{\textwidth}
+% \rhead{\tiny\entitle}
 
 \sloppy
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -41,23 +40,19 @@
 %\end{CJK}%
 }}%
 
-\renewcommand{\arraystretch}{1.8}
-
 %\setromanfont{Times New Roman}
 
 
 \begin{document}
+
+\renewcommand{\arraystretch}{1.8}
+
 \input{summarize_table}
 
 
 \begin{onehalfspace}
 
 \input{summarize_body}		
-
-\section{Bibliography}
-
-\bibliography{../reference.bib}
-\bibliographystyle{plain}
 
 \end{onehalfspace}
 
