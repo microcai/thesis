@@ -26,7 +26,8 @@
 % Must use CM font by default
 \usepackage[cm-default]{fontspec}
 % For using Chinese
-\usepackage[BoldFont,SlantFont]{xeCJK}
+\usepackage[BoldFont,SlantFont,CJKnumber]{xeCJK}
+\usepackage{CJKnumb}
 
 %！！重要！！%这是防止 - -- --- 等特殊符号失去在 LaTeX 下原油的意义。
 \defaultfontfeatures{Mapping=tex-text}
@@ -47,3 +48,8 @@
 
 % Chinese title of my thesis
 \newcommand{\cntitle}{\cjk{机器翻译中的英语语义分析}}
+
+\newenvironment{CJKenumerate}{%
+\newcounter{listcount}%
+\begin{list}{\stepcounter{listcount}\CJKnumber{\arabic{listcount}}、}{}%
+}{\end{list}}
