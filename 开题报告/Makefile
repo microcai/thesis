@@ -6,15 +6,23 @@ INTERMEDIAFILE=missfont.log report.aux report.log report.out report.toc report.b
 
 XeLaTeX=xelatex
 BiBTeX=bibtex
+TEXINPUTS="../fontsetup/Have_Adobe_and_TimesNewRoman/:"
 
 all:$(PDF)
 
+.phone: compile 
+
+compile:
+	env TEXINPUTS=$(TEXINPUTS) $(XeLaTeX) -interaction=nonstopmode $(SOURCE)
+
 $(INTERMEDIAFILE) $(PDF):$(SOURCE).tex ../reference.bib
-	$(RM) $(INTERMEDIAFILE)
-	$(XeLaTeX) -interaction=nonstopmode $(SOURCE)
-	$(XeLaTeX) -interaction=nonstopmode $(SOURCE)
+	$(MAKE) clean  compile
+	$(MAKE) compile
 	$(BiBTeX) $(SOURCE)
-	$(XeLaTeX) -interaction=nonstopmode $(SOURCE)
-	$(XeLaTeX) -interaction=nonstopmode $(SOURCE)
+	$(MAKE) compile
+	$(MAKE) compile
+
+clean-all:clean
+	rm ${PDF}
 clean:
-	$(RM) $(INTERMEDIAFILE) $(PDF)
+	-$(RM) $(INTERMEDIAFILE) 

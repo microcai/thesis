@@ -26,18 +26,15 @@
 
 \framedparbox{
 %\fbox{
-\vspace*{2ex}
  <symbol> ::= \_\_expression\_\_ 
-\vspace*{2ex}
  }
  
- 这里的 <符号> 是非终结符，而表达式由一个符号序列，或用指示选择的竖杠 `|' 分隔的多个符号序列构成，每个符号序列整体都是左端的符号的一种可能的替代。从未在左端出现的符号叫做终结符。 
+  这里的 <符号> 是非终结符，而表达式由一个符号序列，或用指示选择的竖杠 `|' 分隔的多个符号序列构成，每个符号序列整体都是左端的符号的一种可能的替代。从未在左端出现的符号叫做终结符。 
  对于句子 \fbox{\tt John hit the ball}. 这里给出了一个不太完整的用于分析此句子的BNF声明 \\
 
 \fbox{\begin{minipage}{12cm}
 % \framedparbox{
 %\fbox{\vbox{
-\vspace*{2ex}
 ENDPUNC ::= '.' | '?' 
 
 S ::= NP VP ENDPUNC | NP ENDPUNC | VP ENDPUNC | ...  < more >
@@ -54,7 +51,6 @@ Pron ::= I | "you" | ..... <more>
 
 .... <more>
 
-\vspace*{2ex}
 \end{minipage} }
 
 

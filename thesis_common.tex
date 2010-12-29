@@ -57,11 +57,11 @@
 \newlength{\parwidth}%
 
 \newcommand{\framedparbox}[1]{ {% 
- \\[1em]%
+ \par 
  \setlength{\parwidth}{\linewidth}%
  \addtolength{\parwidth}{-1.5\parindent}%
- \hspace*{\parindent}% 
+% \hspace*{\parindent}% 
  \fbox{%
    \parbox{\parwidth}{\tt{}#1}%
  }%
-}\vspace{2ex}}%
+}\vspace*{1ex}}%
