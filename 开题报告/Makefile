@@ -9,7 +9,7 @@ BiBTeX=bibtex
 
 all:$(PDF)
 
-$(INTERMEDIAFILE) $(PDF):$(SOURCE).tex ../thesisbib.bib
+$(INTERMEDIAFILE) $(PDF):$(SOURCE).tex ../reference.bib
 	$(RM) $(INTERMEDIAFILE)
 	$(XeLaTeX) -interaction=nonstopmode $(SOURCE)
 	$(XeLaTeX) -interaction=nonstopmode $(SOURCE)
