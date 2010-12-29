@@ -1,31 +1,26 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[ urlcolor = blue, colorlinks = true, citecolor = black, linkcolor = black]{hyperref}
-\usepackage[BoldFont,SlantFont]{xeCJK}
-\usepackage{graphicx}
-\usepackage{xltxtra}
+\usepackage[xetex]{graphicx}
 \usepackage{fancyhdr}
 \usepackage{booktabs}
 \usepackage{makecell}
 \usepackage{fancybox}
-\usepackage{bibentry}
-\usepackage{natbib}
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{color}
 \usepackage{setspace}
+\usepackage{wrapfig}
+
+\input{../thesis_common}
 
 \usepackage[bf, tiny]{titlesec}
     \titleformat{\section}{\bf}{\thesection{}. }{0.24em}{}
     \titlespacing{\section}{0cm}{*1.5}{*1.1}
 
 
-
-%！！重要！！%这是防止 - -- --- 等特殊符号失去在 LaTeX 下原油的意义。
-\defaultfontfeatures{Mapping=tex-text}
-
 \XeTeXlinebreaklocale{en-us}
 \setmainfont{Times New Roman}
-\setCJKmainfont[BoldFont=WenQuanYi Micro Hei]{Adobe Song Std}
+\setCJKmainfont{Adobe Song Std}
 \setCJKfamilyfont{song}{Adobe Song Std}
 
 \newcommand{\cjk}[1]{%
@@ -35,46 +30,13 @@
 
 \punctstyle{CCT}
 
-\makeatletter
-
 \renewcommand{\contentsname}{开题报告目录(全文附后)}
 %\renewcommand{\sectionsname}{开题报告目录(全文附后)}
-
-\renewenvironment{thebibliography}[1]{%
-      \list{\@biblabel{\@arabic\c@enumiv}}%
-           {\settowidth\labelwidth{\@biblabel{#1}}%
-            \leftmargin\labelwidth
-            \advance\leftmargin\labelsep
-            \@openbib@code
-            \usecounter{enumiv}%
-            \let\p@enumiv\@empty
-            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-      \sloppy
-      \clubpenalty4000
-      \@clubpenalty \clubpenalty
-      \widowpenalty4000%
-      \sfcode`\.\@m}
-     {\def\@noitemerr
-       {\@latex@warning{Empty `thebibliography' environment}}%
-      \endlist}
-\makeatother
-
-%\usepackage[style=plaintop]{floatrow}
-
-\setlength{\parindent}{24pt}
- \setlength{\parskip}{3pt plus1pt minus2pt}
- \setlength{\baselineskip}{20pt plus2pt minus1pt}
-% \setlength{\textheight}{21.5true cm}
- \setlength{\textwidth}{15true cm}
-  \setlength{\headsep}{10truemm}
-  \setlength{\oddsidemargin}{0.26cm}   % 左边 3.25cm=0.71+2.54
-\setlength{\evensidemargin}{0.26cm}
-    
 
 
 %\usepackage{tableau}
 
-\title{浙江理工大学外国语学院英语专业本科毕业论文开题报告}
+\title{\cntitle}
 \author{microcai}
 
 \renewcommand{\arraystretch}{1.8}
@@ -91,7 +53,7 @@
   	  \hline
      \makecell{\textbf{班级}} & \makecell{\textbf{07英语(2)班}} & \makecell{\textbf{姓名}} &  				\makecell{\textbf{蔡万钊}}  \\
      \hline
-     \textbf{课题名称} & \multicolumn{3}{c|}{ \textbf{基于语义分析的自动翻译} } \\
+     \textbf{课题名称} & \multicolumn{3}{c|}{ \textbf{\cntitle} } \\
      \hline 
 
 	\multicolumn{4}{|m{\textwidth-14pt}|}{
@@ -117,65 +79,8 @@
 
 \begin{onehalfspace}
 
-\section{选题意义与可行性分析}
-
-进入新时代，人和人交流更多了。但是语言仍然是无阻碍交流里不可逾越的鸿沟，为了跨过这个鸿沟，
-我们花费了太多代价。无数的书籍、文献亟待翻译。人力资源不仅短缺，也很昂贵。
-无数先锋开发出了多种数学模型试图翻译，很多确实在工作的特别好。但是，要用一个数学模型去做翻译，缺点太多。
-语言不是简单的能用公式就表达的清楚的。不是简单的用一个数学模型去隐射就能翻译的。
-要正确的进行翻译，源文本的意思必须要被理解。
-
-理解？如何让计算机理解文字？
-
-这一方面编译器就做的很到位。高级语言本身已经很接近人类语言了，编译器依然能够理解并翻译成机器语言。
-这种翻译是一种精确的翻译。人类的言语可以使用这样的模型翻译么？
- \cite{Compilers_Principles_Techniques_and_Tools}
-
-可以，至少相当数量的句子是可以的。为何不去试一试呢？或者是，拿英语作为试验的对象。
-和汉语不一样，英语具有非常严格的语法，每个句子都是非常完整的，很有逻辑。只有固定的几个句式，
-每个句式的各个部分又可以嵌套进别的句式形成复合句型，非常适合用关系树去表达。
-
-\section{研究的基本内容与拟解决的主要问题}
-
-本文旨在研究从英语生成语法树并对语法树进行汉语表达的可能性。
-
-主要的问题是如何从一段英语文本生成抽象语法树，并使用合理的方式将语法树表达为汉语。
-
-英语具有非常明显的结构，如果能将一个句子的各个单词的词性全部划分，那就非常容易构建语法树。
-而为单词标记词性，已经是一个前人研究的结果了。
-
-%TODO 查一下我最近看的到底是哪篇文章讲解了这一过程，加入文献引用库
-
-\section{总体研究思路及预期研究成果}
-
-句子不是词语的堆砌。一个句子是有语法在里面的。 
-如果完整的解析一个句子的意思，生成另一个中间语言。这个中间语言被叫做元语言。 在内存中可以用一个抽象语法树完整表达。
-这个元语言必须是图灵完全而且是自描述的。 
-
-然后再依据元语言，构造符合目标语言语法的，语义一致的一系列语句。 
-接着使用统计模型，从中选择一条最有可能，正确的概率最大的作为最终的翻译结果。 \cite{STATMT}
-
-所以，机器翻译就被分解成几个子任务了。 
-
-首先，需要构建一种元语言。这个语言应该是图灵完全和自描述的，并且可以在内存中用数据结构表示出来。由于我对英语最熟悉，所以我打算使用英语做为基础来构建元语言。 
-
-第二，源语言到元语言的翻译。这个过程就是词法分析。找出每个单词的含义，并结合上下文和所处的环境，唯一确定下对应的元语言。如果含义无法唯一确定，可以构造多条元语言语句。待后续分析后再做决定 
-
-第三，元语言的到目标语言的表达。这个时候必须依靠统计学，因为无法唯一确定元语言单词到目标语言单词的映射。需要基于统计学进行筛选。 
-
-预期做出一个Demo完成翻译任务。
-
-\section{研究工作计划}
-
-年底前拜读机器翻译大师的作品，找到一些前人已经有的功能，避免重复发明轮子。
-次年开始构筑翻译Demo
-次年3月完成Demo和论文。
+\input{report_body}
 
 \end{onehalfspace}
-
-\section{参考文献}
-
-\bibliography{../thesisbib}
-\bibliographystyle{plain}
 
 \end{document}
