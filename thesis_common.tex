@@ -1,3 +1,11 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Must use CM font by default
+\usepackage[cm-default]{fontspec}
+% For using Chinese
+\usepackage[BoldFont,SlantFont,CJKnumber]{xeCJK}
+\usepackage{CJKnumb}
+\punctstyle{banjiao}
+
 % For same settings as M$ Word.
 \usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
 
@@ -25,14 +33,25 @@
       \endlist}%
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% new env and cmd
+\newlength{\parwidth}%
+\newcommand{\framedparbox}[1]{ {% 
+ \par 
+ \setlength{\parwidth}{\linewidth}%
+ \addtolength{\parwidth}{-1.5\parindent}%
+% \hspace*{\parindent}% 
+ \fbox{%
+   \parbox{\parwidth}{\tt{}#1}%
+ }%
+}\vspace*{1ex}}%
 
-% Must use CM font by default
-\usepackage[cm-default]{fontspec}
-% For using Chinese
-\usepackage[BoldFont,SlantFont,CJKnumber]{xeCJK}
-\usepackage{CJKnumb}
+\newenvironment{CJKenumerate}{%
+\newcounter{listcount}%
+\begin{list}{\stepcounter{listcount}\CJKnumber{\arabic{listcount}}、}{}%
+}{\end{list}}
 
-\punctstyle{banjiao}
+
+%%%%%%%%%%%%%%%
 
 %！！重要！！%这是防止 - -- --- 等特殊符号失去在 LaTeX 下原油的意义。
 \defaultfontfeatures{Mapping=tex-text}
@@ -45,23 +64,10 @@
 
 % English title of my thesis
 \newcommand{\entitle}{Lexical Analyse in English Machine Translation}
-
 % Chinese title of my thesis
 \newcommand{\cntitle}{\cjk{机器翻译中的英语语义分析}}
 
-\newenvironment{CJKenumerate}{%
-\newcounter{listcount}%
-\begin{list}{\stepcounter{listcount}\CJKnumber{\arabic{listcount}}、}{}%
-}{\end{list}}
+% Author name
+\newcommand{\cnauthor}{蔡万钊}
+\newcommand{\enauthor}{Microcai}
 
-\newlength{\parwidth}%
-
-\newcommand{\framedparbox}[1]{ {% 
- \par 
- \setlength{\parwidth}{\linewidth}%
- \addtolength{\parwidth}{-1.5\parindent}%
-% \hspace*{\parindent}% 
- \fbox{%
-   \parbox{\parwidth}{\tt{}#1}%
- }%
-}\vspace*{1ex}}%
