@@ -9,18 +9,15 @@
 
 \input{thesis_common}
 
-%\newcommand{\LABTP}{{Lexical Analyse Based Translation Program }}
-
 \title{\entitle}
 \author{\enauthor}
-
+\date{}
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-\LABTP extends popular compiler model to support translating human languages.
-
+Real understanding of English text is required by much of tasks such as \emph{Machine Translation}, \emph{NLP\footnote{Natural Language Processing}}, etc. Building Concrete Syntax Tree \cite{cst} is the very first step of the understanding process. This thesis brings you one possible way of building Parse Tree of Natural Language -- English. It employs \emph{HMM based part-of-speech tagging} and \emph{BNF\footnote{Backus–Naur Form\protect\cite{BNF}} based Natural Language Parse Program}
 \end{abstract}
 
 \section{Introduction}
@@ -34,7 +31,7 @@ Much of the previous model employ too much mathematics, focus not enough to the 
 of the words. Translate is not a simple mapping from source language to target language.
 In order to do perfect translation, the true meaning of the words must be understood. 
 
-\LABTP is based on the compiler model. What is a compiler? A translator between
+%\LABTP is based on the compiler model. What is a compiler? A translator between
 one computer language to another. A compiler accept well defined computer language
 text, and produce well defined computer language output. The computer language is well
 defined, so it is possible to do lexical analyse. As for human languages? Hmm \ldots\ldots 
@@ -45,5 +42,11 @@ NLP-friendly \footnote{NLP-friendly means, easy to do with Natural Language Proc
 human language ever exist.
 
 \includegraphics{zstu}
+
+\section{Bibliography}
+
+\bibliography{reference}
+\bibliographystyle{plain}
+
 
 \end{document}
