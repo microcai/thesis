@@ -26,42 +26,21 @@
 %承诺书
 \input{chapter/commitment}
 
-\setcounter{page}{1}
-
 %中英文摘要
 
 \input{chapter/abstract}
 
-\maketitle
+% 目录
+\tableofcontents
+\clearpage
 
-\begin{abstract}
+% 重新页树
+\setcounter{page}{1}
 
-Real understanding of English text is required by much of tasks such as \emph{Machine Translation}, \emph{NLP\footnote{Natural Language Processing}}, etc. Building Concrete Syntax \mbox{Tree \cite{cst}} is the very first step of the \mbox{understanding} process. This thesis brings you one possible way of building Parse Tree of Natural Language -- English. It employs \emph{HMM based part-of-speech tagging} and \emph{BNF\footnote{Backus–Naur Form\protect\cite{BNF}} based Natural Language Parse Program}. 
-\end{abstract}
 \begin{onehalfspace}
 
-\section{Introduction}
+\input{chapter/chap-intro.tex}
 
-As moving to a new age, people tend to need more communication. Filling the gap
-between different cultures requires translating countless books, articles and
-words. Human resource is always a limitation. Thousands of pioneers have developed
-a serious of Mathematical model for doing translation mechanically. 
-
-Much of the previous model employ too much mathematics, focus not enough to the true meaning
-of the words. Translate is not a simple mapping from source language to target language.
-In order to do perfect translation, the true meaning of the words must be understood. 
-
-%\LABTP is based on the compiler model. What is a compiler? A translator between
-one computer language to another. A compiler accept well defined computer language
-text, and produce well defined computer language output. The computer language is well
-defined, so it is possible to do lexical analyse. As for human languages? Hmm \ldots\ldots 
-But, wait! Won't we really do lexical analyse on human language?
-
-Well, It's partly possible. Think of English. English is the mostly
-NLP-friendly \footnote{NLP-friendly means, easy to do with Natural Language Processing}
-human language ever exist.
-
-\includegraphics{zstu}
 
 \end{onehalfspace}
 %\begin{bib}

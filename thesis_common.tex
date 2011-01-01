@@ -55,14 +55,15 @@
 \begin{center}%
 {\fontsize{16}{16}\selectfont\bf%三号，加粗，居中
 \abstractname}%
-\end{center}
-\vspace*{6ex}
-\par\indent
-}{}
+\end{center}%
+\vspace*{3ex}%
+\begin{onehalfspace}%
+\par\indent%
+}{\end{onehalfspace}}%
 
 \newcommand{\keywordsname}{Keywords:}
 
-\newcommand{\keywords}[1]{\vspace*{4ex}\noindent\textbf{\keywordsname}#1}
+\newcommand{\keywords}[1]{\vspace*{3ex}\noindent{\fontsize{14}{14}\selectfont\bf\keywordsname}~#1}
 %%%%%%%%%%%%%%%
 
 %！！重要！！%这是防止 - -- --- 等特殊符号失去在 LaTeX 下原油的意义。
