@@ -50,7 +50,19 @@
 \begin{list}{\stepcounter{listcount}\CJKnumber{\arabic{listcount}}、}{}%
 }{\end{list}}
 
+%%%%%%%%%%%%%%%%%%%%
+\renewenvironment{abstract}{%
+\begin{center}%
+{\fontsize{16}{16}\selectfont\bf%三号，加粗，居中
+\abstractname}%
+\end{center}
+\vspace*{6ex}
+\par\indent
+}{}
 
+\newcommand{\keywordsname}{Keywords:}
+
+\newcommand{\keywords}[1]{\vspace*{4ex}\noindent\textbf{\keywordsname}#1}
 %%%%%%%%%%%%%%%
 
 %！！重要！！%这是防止 - -- --- 等特殊符号失去在 LaTeX 下原油的意义。
