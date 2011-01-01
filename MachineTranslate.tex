@@ -1,4 +1,5 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper,12pt]{article}
+\usepackage[none]{hyphenat}
 \usepackage[ urlcolor = blue, colorlinks = true, citecolor = black, linkcolor = black]{hyperref}
 \usepackage{graphicx}
 %\usepackage{xltxtra}
@@ -6,19 +7,31 @@
 \usepackage{booktabs}
 \usepackage{indentfirst}
 \usepackage{abstract}
+\usepackage{setspace}
+\usepackage{array}
 
 \input{thesis_common}
 
+
 \title{\entitle}
 \author{\enauthor}
+
 \date{}
+
 \begin{document}
+\sloppy
+%First Page
+\input{chapter/coverpage}
+
+\setcounter{page}{1}
 
 \maketitle
 
 \begin{abstract}
-Real understanding of English text is required by much of tasks such as \emph{Machine Translation}, \emph{NLP\footnote{Natural Language Processing}}, etc. Building Concrete Syntax Tree \cite{cst} is the very first step of the understanding process. This thesis brings you one possible way of building Parse Tree of Natural Language -- English. It employs \emph{HMM based part-of-speech tagging} and \emph{BNF\footnote{Backus–Naur Form\protect\cite{BNF}} based Natural Language Parse Program}
+
+Real understanding of English text is required by much of tasks such as \emph{Machine Translation}, \emph{NLP\footnote{Natural Language Processing}}, etc. Building Concrete Syntax \mbox{Tree \cite{cst}} is the very first step of the \mbox{understanding} process. This thesis brings you one possible way of building Parse Tree of Natural Language -- English. It employs \emph{HMM based part-of-speech tagging} and \emph{BNF\footnote{Backus–Naur Form\protect\cite{BNF}} based Natural Language Parse Program}. 
 \end{abstract}
+\begin{onehalfspace}
 
 \section{Introduction}
 
@@ -43,10 +56,10 @@ human language ever exist.
 
 \includegraphics{zstu}
 
+\end{onehalfspace}
+%\begin{bib}
 \section{Bibliography}
-
 \bibliography{reference}
 \bibliographystyle{plain}
-
-
+%\end{bib}
 \end{document}
