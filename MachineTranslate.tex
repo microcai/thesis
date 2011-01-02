@@ -9,9 +9,10 @@
 \usepackage{abstract}
 \usepackage{setspace}
 \usepackage{array}
+\usepackage{tocloft}
+\usepackage{titlesec}
 
 \input{thesis_common}
-
 
 \title{\entitle}
 \author{\enauthor}
@@ -23,6 +24,7 @@
 
 \begin{titlepage}
 \pagestyle{empty}
+\pagenumbering{roman}
 
 %First Page
 \input{chapter/coverpage}
@@ -34,18 +36,31 @@
 
 \input{chapter/abstract}
 
+\renewcommand{\contentsname}{\begin{center}Contents\end{center}}
+
+\end{titlepage}
+
+\pagenumbering{Roman}
 % 目录
 \tableofcontents
 \clearpage
 
-% 重新页树
-%\setcounter{page}{1}
-
-\end{titlepage}
+% 重新开始页码
+\pagenumbering{arabic}
+\setcounter{page}{1}
 
 \begin{onehalfspace}
 
 \input{chapter/chap-intro.tex}
+
+\section{Defination of a Language}
+\textsc{Hello}
+
+\subsection{Structure of the English Sentence}
+
+
+
+\section{ddddd}
 
 \end{onehalfspace}
 %\begin{bib}
