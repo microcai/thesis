@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Must use CM font by default
-\usepackage[cm-default]{fontspec}
+% Must use CM font by default, and don't change math font
+\usepackage[cm-default,no-math,quiet]{fontspec}
 % For using Chinese
 \usepackage[SlantFont,CJKnumber]{xeCJK}
 \usepackage{CJKnumb}
@@ -13,6 +13,10 @@
 
 % For using bibtex
 \usepackage{natbib,bibentry}
+
+%do not breaking any words
+\usepackage[none]{hyphenat}
+\sloppy
 
 % This is for making thebibliography the same style as my school requests
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

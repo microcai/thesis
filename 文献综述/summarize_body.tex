@@ -78,14 +78,13 @@ HMM can learned to calculate the most possible value of very $P_i$. Thus, the ta
 
 \subsection{Concrete Syntax Tree Generating}
 
-A concrete syntax tree\cite{cst} or parse tree is an (ordered, rooted) tree that \mbox{represents} the syntactic structure of a string according to some formal grammar.
+A concrete syntax tree\cite{cst} or parse tree is an (ordered, rooted) tree that re-presents the syntactic structure of a string according to some formal grammar.
+
 \begin{wrapfigure}{}{13em}
 \begin{center}
 \includegraphics{../ParseTree}
 \caption{A simple parse tree}
-\end{center}
-\end{wrapfigure}
-In a parse tree, the interior nodes are labeled by non-terminals of the grammar, while the leaf nodes are labeled by terminals of the grammar. Parse trees may be generated for sentences in {\em \mbox{natural} \mbox{languages}},  as well as during processing of computer languages, such as programming languages. Parse trees are \mbox{distinct} from abstract syntax trees (also known \mbox{simply} as syntax trees), in that their structure and \mbox{elements} more concretely reflect the syntax of the \mbox{input} language.
+\end{center}\end{wrapfigure}In a parse tree,  the interior nodes are labeled by non-terminals of the grammar, while the leaf nodes are labeled by terminals of the grammar. Parse trees may be generated for sentences in {\em \mbox{natural} \mbox{languages}},  as well as during processing of computer languages, such as programming languages. Parse trees are \mbox{distinct} from abstract syntax trees (also known \mbox{simply} as syntax trees), in that their structure and \mbox{elements} more concretely reflect the syntax of the \mbox{input} language.
 
 Syntax tree  can be descriped in BNF\footnote{Backus–Naur Form}.
 BNF\cite{BNF} is a notation technique for context-free grammars, often used to describe the syntax of languages used in computing, such as computer programming languages, document formats, instruction sets and communication protocols. It is applied wherever exact descriptions of languages are needed, for instance, in official language specifications, in manuals, and in textbooks on programming language theory.
@@ -121,12 +120,12 @@ Pron ::= I | "you" | ..... <more>
 \vspace*{2ex}
  }
 
-The compelete version of the abrove file can fully describe \emph{The English Language}. 
-And compelete English BNF declaration will probably need \emph{extended} BNF. 
+The complete version of the above file can fully describe \emph{The English Language}. 
+And complete English BNF declaration will probably need \emph{extended} BNF. 
 Many \mbox{extensions} and variants of the original notation are defined, including EBNF\footnote{Extended Backus--Naur Form} and ABNF\footnote{Augmented Backus--Naur Form}.
 
-Bison\cite{bison} is a general-purpose parser generator that converts a grammar description for an LALR(1) context-free grammar into a C program to parse that grammar.
-The grammar description file is very close-to BNF. The  \fbox{\texttt{John hit the ball}}  if written in Bison frammer file should like like this:
+Bison\cite{bison} is a general-purpose parser generator that converts a grammar description for an LALR\footnote{An LALR parser is a type of parser defined in computer science as a Look-Ahead LR parser.} context-free grammar into a C program to parse that grammar.
+The grammar description file is very close-to BNF. The  \fbox{\texttt{John hit the ball}}  if written in Bison grammar file should like like this:
 
 \renewcommand{\arraystretch}{1}
 
@@ -170,7 +169,22 @@ can really write concrete syntax tree generator.
 The simple non-complete Bison grammar file uses hard coded ``hit'' as V, but HMM can tell you  precisely what is a `V'  and what is a P, etc. Thus, first uses flex to tokenize the input (i.e. get $Wr$ ), them run HMM to get a result array ( i.e. $Pr$) . Then uses $P_{i}W_i$ pair as the
 input of bison generated code, then bison generated code will build perfect concrete syntax tree.
 
-More details I will not be written it here, because this is what my thesis will do.
+\subsection{The 1\textsuperscript{st} Step: Parser with human aided part-of-speech tagging}
+
+In the first stage , I'll write Parser program that parse pre-tagged text and build parse tree.
+This is needed to develop a complex parser without dealing with the complexity of part-of-speech tagging. Modern software is always developed this way --- to divide  and develop each
+component separately. When this parser shows is usability, then it is time to move on ------ 
+
+More details will not be written it here, because this is what my thesis will do. I just tell something as a framework.
+
+\subsection{The 2\textsuperscript{nd} Step: HMM aided part-of-speech tagging}
+
+Now time to write tagging program. Maybe at that time, I won't need to write it myself.
+I head that a lot of work has already been done, I just need to re-assembly them.
+
+\subsection{The 3\textsuperscript{rd} Step: Parser with HMM aided part-of-speech tagging}
+
+Finally, put these two parts together, I hope the English language parser program will come to see the word.
 
 \section{Bibliography}
 \nocite{GPL}

@@ -1,8 +1,6 @@
 \renewcommand{\tablename}{}
 
-\begin{table}[h]
-\vskip 20pt
-
+\begin{table}
 \centering
 {\fontsize{16}{16}\CJKfamily{heiti} 附件目录}
 
@@ -11,21 +9,24 @@
 \fontsize{11}{16}\selectfont
 
 \newcounter{attachment}
-\newcommand{\attachment}{\stepcounter{attachment}\arabic{attachment}}
-\arrayskip 0ex
-
+\newcommand{\makeskipcell}[1]{\makecell{\rule{0em}{0.7em}\\#1\\\rule{0em}{0.7em}}}
+\newcommand{\attachment}{\stepcounter{attachment}\makeskipcell{\arabic{attachment}}}
+%\renewcommand{\arraystretch}{1.3}
+\renewcommand{\arraystretch}{1.3} 
 \begin{center}
 \begin{tabular}{|c|c|c|}\hline
- \rule{1em}{0em} 编号 \rule{1em}{0em} &
+\rule{1em}{0em} 编号 \rule{1em}{0em} &
 \rule{8em}{0em} 附加内容 \rule{8em}{0em} & 
 \rule{1.5em}{0em} 页数 \rule{1.5em}{0em} \\\hline
-
+\renewcommand{\arraystretch}{1}
 \attachment &  选题申报表 & 0 \\\hline
 \attachment &  任务书 & 0 \\\hline
-\attachment &  \makecell{选题申报表选题申报表\\选题申报表\\选题申报表选题申报表} & 0 \\\hline
-\attachment &  选题申报表 & 0 \\\hline
-\attachment &  选题申报表 & 0 \\\hline
-
+\attachment &  文献综述 & 0 \\\hline
+\attachment &  开题报告 & 0 \\\hline
+\attachment &  毕业论文进程安排与考核表 & 0 \\\hline
+\attachment &  毕业论文指导记录卡 & 0 \\\hline
+\attachment &  答辩记录 & 0 \\\hline
+\attachment &  论文成绩评定表 & 0 \\\hline
 \end{tabular}
 \end{center}
 \end{table}
