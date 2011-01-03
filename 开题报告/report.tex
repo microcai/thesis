@@ -1,13 +1,9 @@
 \documentclass[12pt,a4paper]{article}
+\usepackage{color}
 \usepackage[ urlcolor = blue, colorlinks = true, citecolor = black, linkcolor = black]{hyperref}
 \usepackage[xetex]{graphicx}
-\usepackage{fancyhdr}
-\usepackage{booktabs}
-\usepackage{makecell}
-\usepackage{fancybox}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{color}
+\usepackage{fancyhdr,fancybox}
+\usepackage{array,booktabs,makecell,longtable}
 \usepackage{setspace}
 \usepackage{wrapfig}
 
@@ -52,9 +48,9 @@
 \begin{table}[here]
  \begin{tabular}{|m{55pt}|m{180pt}|m{55pt}|m{80pt}|}
   	  \hline
-     \makecell{\textbf{班级}} & \makecell{\textbf{\myclass}} & \makecell{\textbf{姓名}} &  				\makecell{\textbf{\cnauthor}}  \\
+     \multicolumn{1}{|c|}{\bf 班级} & \multicolumn{1}{c|}{\bf \myclass} &  \multicolumn{1}{c|}{\bf 姓名} &  \multicolumn{1}{c|}{\bf\cnauthor} \\
      \hline
-     \textbf{课题名称} & \multicolumn{3}{c|}{ \textbf{\cntitle} } \\
+     \multicolumn{1}{|c|}{\bf 课题名称} & \multicolumn{3}{c|}{ \textbf{\cntitle} } \\
      \hline 
 
 	\multicolumn{4}{|m{\textwidth-14pt}|}{
@@ -65,15 +61,12 @@
     
     \textbf{成绩} & \multicolumn{3}{l|}{} \\
     \hline
-    \makecell{\textbf{答辩}\\\\\textbf{意见} } & 
-    	\makecell{答辩组长签名:\\\\\\   \qquad{}年\quad 月\quad 日} & 
-	     \makecell{ 
-	     	\\\\\textbf{系}\\\textbf{主}\\\textbf{任}\\
-	     	\textbf{审}\\\textbf{核}\\ \textbf{意}\\\textbf{见}\\\\
-	      } &
+    \bf \makecell{答辩\\[4ex]意见 } & 
+    	\makecell{ 答辩组长签名:\\\\\\   \qquad{}年\quad 月\quad 日} & 
+	    \bf \makecell{ \\\\系\\主\\任\\审\\核\\意\\见\\\\ } &
 	      
 		 \makecell{签名\\\\\\\qquad{}年\quad 月\quad 日} \\
-     \hline
+		     \hline
   \end{tabular}
 \end{table} 
 
