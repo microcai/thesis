@@ -8,7 +8,7 @@ MachineTranslate.blg\
 MachineTranslate.dvi\
 MachineTranslate.ps
 
-LaTeX=latex
+LaTeX=xelatex
 
 all:$(PDF)
 
@@ -18,7 +18,6 @@ $(INTERMEDIAFILE) $(PDF):$(SOURCE).tex
 	$(LaTeX) -interaction=nonstopmode $(SOURCE)
 	$(LaTeX) -interaction=nonstopmode $(SOURCE)
 	$(LaTeX) -interaction=nonstopmode $(SOURCE)
-	dvipdf	$(SOURCE)
 	$(RM) $(INTERMEDIAFILE)
 clean:
 	$(RM) $(INTERMEDIAFILE) $(PDF)
