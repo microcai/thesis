@@ -1,0 +1,31 @@
+\renewcommand{\tablename}{}
+
+\begin{table}[h]
+\vskip 20pt
+
+\centering
+{\fontsize{16}{16}\CJKfamily{heiti} 附件目录}
+
+\vskip 28pt
+
+\fontsize{11}{16}\selectfont
+
+\newcounter{attachment}
+\newcommand{\attachment}{\stepcounter{attachment}\arabic{attachment}}
+\arrayskip 0ex
+
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline
+ \rule{1em}{0em} 编号 \rule{1em}{0em} &
+\rule{8em}{0em} 附加内容 \rule{8em}{0em} & 
+\rule{1.5em}{0em} 页数 \rule{1.5em}{0em} \\\hline
+
+\attachment &  选题申报表 & 0 \\\hline
+\attachment &  任务书 & 0 \\\hline
+\attachment &  \makecell{选题申报表选题申报表\\选题申报表\\选题申报表选题申报表} & 0 \\\hline
+\attachment &  选题申报表 & 0 \\\hline
+\attachment &  选题申报表 & 0 \\\hline
+
+\end{tabular}
+\end{center}
+\end{table}

@@ -8,7 +8,7 @@
 \usepackage{indentfirst}
 \usepackage{abstract}
 \usepackage{setspace}
-\usepackage{array}
+\usepackage{array,makecell,tabularx}
 \usepackage{tocloft}
 \usepackage{titlesec}
 
@@ -36,36 +36,51 @@
 
 \input{chapter/abstract}
 
-\renewcommand{\contentsname}{\begin{center}Contents\end{center}}
-
 \end{titlepage}
 
+%罗马数字页码
 \pagenumbering{Roman}
 % 目录
+% 目录两字居中
+\renewcommand{\contentsname}{\begin{center}Contents\end{center}}
 \tableofcontents
 \clearpage
 
-% 重新开始页码
+%阿拉伯数字页码
 \pagenumbering{arabic}
+% 重新开始页码
 \setcounter{page}{1}
 
+% 1.5倍行距
 \begin{onehalfspace}
 
-\input{chapter/chap-intro.tex}
+% 介绍节
+\input{chapter/chap-intro}
 
-\section{Defination of a Language}
-\textsc{Hello}
+% 语言的结构
+\input{chapter/chap-lang}
 
-\subsection{Structure of the English Sentence}
-
-
-
-\section{ddddd}
+% 词性的标记
+\input{chapter/chap-tagging}
 
 \end{onehalfspace}
 %\begin{bib}
-\section{Bibliography}
+% 参考文献
+\section{Bibliography}%\stepcounter{section}\addcontentsline{toc}{section}{Bibliography}
+
 \bibliography{reference}
 \bibliographystyle{plain}
 %\end{bib}
+
+\section{Acknowledgements}%\stepcounter{section}\addcontentsline{toc}{section}{acknowledgements}
+
+\appendix
+\clearpage
+\section*{\begin{center}Appendix\end{center}}\addcontentsline{toc}{section}{Appendix}
+
+
+\include{chapter/tableofattachment}
+
+\pagestyle{empty}
+\include{chapter/thanks}
 \end{document}

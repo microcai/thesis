@@ -1,11 +1,13 @@
 {
+ \setCJKfamilyfont{song}[Mapping=tex-text,BoldFont=song-bold,ItalicFont=AR PL KaitiM GB]{Adobe Song Std}
+
 \renewcommand{\abstractname}{摘要}
 \renewcommand{\keywordsname}{关键词：}
 
 \begin{abstract}
-
-Real understanding of English text is required by much of tasks such as \emph{Machine Translation}, \emph{NLP\footnote{Natural Language Processing}}, etc. Building Concrete Syntax \mbox{Tree \cite{cst}} is the very first step of the \mbox{understanding} process. This thesis brings you one possible way of building Parse Tree of Natural Language -- English. It employs \emph{HMM based part-of-speech tagging} and \emph{BNF\footnote{Backus–Naur Form\protect\cite{BNF}} based Natural Language Parse Program}. 
-
+\CJKfamily{song}
+许多工作，比如 \emph{机器翻译}，\emph{人工语言处理(NLP)}，需要对英文文本的真正意思进行理解。而为输入构筑语法树（CST，Concrete Syntax Tree， or Parse Tree\cite{cst}）是``理解''的第一步。本论文叙述的就是为英语构筑语法树一种可能的方式。它利用了前人研究成果 \emph{基于隐马尔科夫模型(HMM)的语法标记}、\emph{基于巴科斯范式(BNF)的自然语言处理} 
+构筑语法解析程序。
 
 \keywords{语法树，机器翻译，隐马尔科夫模型，语法标记}
 \end{abstract}

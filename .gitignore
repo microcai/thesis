@@ -8,10 +8,11 @@
 *.html
 !*.tex
 sample.tex
-chapter/
 *.dvi
 *#
 *.b*
 *.ps
 *.*dv*
 setup_font.tex
+*~
+machinetranslate.kilepr
