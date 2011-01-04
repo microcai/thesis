@@ -1,0 +1,71 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[ urlcolor = blue, colorlinks = true, citecolor = black, linkcolor = black]{hyperref}
+\usepackage{graphicx}
+%\usepackage{xltxtra}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\usepackage{abstract}
+\usepackage{setspace}
+\usepackage{array,makecell,tabularx}
+\usepackage{tocloft}
+\usepackage{titlesec}
+
+\input{../thesis_common}
+
+\pagestyle{empty}
+
+\title{\cntitle}
+\author{\cnauthor}
+
+\begin{document}
+\begin{center}
+\bf\Large 浙江理工大学外国语学院英语专业本科毕业论文选题申报表
+\end{center}
+
+\vskip 2ex
+\begin{flushright}
+\CJKtoday\hspace*{1cm}
+\end{flushright}
+
+\renewcommand{\arraystretch}{2.5} \noindent
+\begin{tabular}{|c|c|c|c|}\hline
+\makecell{论文\\题目} & \multicolumn{3}{c|}{\centering \cntitle} \\\hline
+学\quad{}生 & \multicolumn{1}{c|}{\hspace{4em}\cnauthor \hspace*{4em}} & \hspace{2em}专\quad{}业\hspace{2em}  &  英语 \\\hline
+\hspace{2em}指导教师 \hspace*{2em}&  \myteacher &  \hspace*{2em}职\quad{}称\hspace*{2em} & \hspace*{2em}副院长\hspace*{2em} \\\hline
+
+\multicolumn{4}{|m{\linewidth}|}{
+
+\begin{onehalfspace}
+
+\parindent 2em
+
+ 人类社会的进步需要更多的沟通。但是语言成了无障碍沟通的巨大障碍，这是人类要建造通天塔的时候上帝为了破坏制定下来的。破坏了沟通就破坏了协作，人类再也造不出通天塔了。一直以来，翻译都是需要非常专业的人进行的。人力资源难免会短缺，而让相当一部分人脱产就是为了翻译，显然是对人力资源的浪费。所以，就像人类社会其他部门使用机器代替人的劳动一样，如果能让机器代替人去做翻译，那真是造福社会之举。
+
+以往的机器翻译，应用最广的比如Google翻译，其模型是统计学。基于统计来判断词汇对应的译条。这在Google庞大的检索数据库的支持下，效果相当不错。当也远不是无懈可击。因为机器根本就没有理解输入文本的含义。也不可能做到真正的翻译。真正的翻译必须建立在对源文本语义的理解之上。所以需要选择合适的模型，用语法树完整的表达源文本的内容。然后再将语法树转译为目标文本。
+
+于是研究将自然语言文本正确的解析成语法树就成了正确翻译的第一步。要解析语法，需要做好两件事情： 1） 词性标记 2) 句法声明。
+本文就旨在研究目前趋近成熟的这2项技术整合后为世人带来的自然语言语法解析程序。
+\end{onehalfspace}
+\vspace*{-9ex}
+}
+\\\hline
+\multicolumn{4}{|m{\linewidth}|}{ 
+课题准备情况 \parindent 2em
+
+在搜索和阅读前人研究成果。准备写语法解析程序。
+}
+\\\hline
+
+
+课题内容性质 &  \multicolumn{3}{c|}{理论研究} \\\hline
+
+课题来源性质 & 学生自立课题 & 类\quad   型 & 论文 \\\hline
+
+\multicolumn{4}{|l|}{系主任审核意见：}\\
+\multicolumn{4}{|l|}{}\\
+\multicolumn{1}{|c}{} & \multicolumn{1}{c}{签名：} &\multicolumn{2}{r|}{年\quad{}月\quad{}日} \\\hline
+
+
+\end{tabular}
+\end{document}
