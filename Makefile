@@ -1,12 +1,12 @@
-SOURCE=MachineTranslate
-PDF=MachineTranslate.pdf
-HTML=MachineTranslate.html
+SOURCE=EnglishParser
+PDF=EnglishParser.pdf
+HTML=EnglishParser.html
 
-INTERMEDIAFILE=MachineTranslate.aux MachineTranslate.log MachineTranslate.out \
-MachineTranslate.bbl \
-MachineTranslate.blg\
-MachineTranslate.dvi\
-MachineTranslate.ps
+INTERMEDIAFILE=EnglishParser.aux EnglishParser.log EnglishParser.out \
+EnglishParser.bbl \
+EnglishParser.blg\
+EnglishParser.dvi\
+EnglishParser.ps
 
 LaTeX=xelatex
 
