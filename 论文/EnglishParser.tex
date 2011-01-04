@@ -11,7 +11,7 @@
 \usepackage{tocloft}
 \usepackage{titlesec}
 
-\input{thesis_common}
+\input{../common/thesis_common}
 
 \title{\entitle}
 \author{\enauthor}
@@ -25,14 +25,14 @@
 \pagenumbering{roman}
 
 %First Page
-\input{chapter/coverpage}
+\input{../chapter/coverpage}
 
 %承诺书
-\input{chapter/commitment}
+\input{../chapter/commitment}
 
 %中英文摘要
 
-\input{chapter/abstract}
+\input{../chapter/abstract}
 
 \end{titlepage}
 
@@ -53,13 +53,13 @@
 \begin{onehalfspace}
 
 % 介绍节
-\input{chapter/chap-intro}
+\input{../chapter/chap-intro}
 
 % 语言的结构
-\input{chapter/chap-lang}
+\input{../chapter/chap-lang}
 
 % 词性的标记
-\input{chapter/chap-tagging}
+\input{../chapter/chap-tagging}
 
 \end{onehalfspace}
 %\begin{bib}
@@ -72,14 +72,18 @@
 
 \section{Acknowledgements}%\stepcounter{section}\addcontentsline{toc}{section}{acknowledgements}
 
-\appendix
 \clearpage
+\appendix
+\setcounter{page}{1}
+\pagenumbering{alph}
 
 \section*{\begin{center}Appendix\end{center}}\addcontentsline{toc}{section}{Appendix}
 
 
-\include{chapter/tableofattachment}
+\input{../chapter/tableofattachment.tex}
+
+\clearpage
 
 \pagestyle{empty}
-\include{chapter/thanks}
+\input{../chapter/thanks}
 \end{document}
