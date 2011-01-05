@@ -22,6 +22,10 @@ monohei="WenQuanYi Zen Hei Mono"
 heiti="Adobe Heiti Std"
 TimesFont="Nimbus Roman No9 L"
 
+LATEX=xelatex
+AC_SUBST(LATEX)
+
+
 AC_ARG_WITH(fontsong,[AC_HELP_STRING([--with-fontsong],[font used to set CJK song, default is Adobe Song Std])],[],[])
 AC_ARG_WITH(fontsongbold,[AC_HELP_STRING([--with-fontsongbold],[font used to set CJK bold song, default is song-bold])],[],[])
 AC_ARG_WITH(fontmonohei,[AC_HELP_STRING([--with-fontmonohei],[font used to set CJK mono font, default is WenQuanYi Zen Hei Mono])],[],[])
