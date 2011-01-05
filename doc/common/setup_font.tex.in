@@ -1,0 +1,7 @@
+% Main Font is Song
+\setCJKmainfont[Mapping=tex-text,BoldFont=@songtibold@]{@songti@}
+\setCJKfamilyfont{tt}[Mapping=tex-text]{@monohei@}
+\setCJKfamilyfont{heiti}[Mapping=tex-text]{@heiti@}
+% Main English Text is Times New Roman
+%\usepackage{times}
+\setromanfont[Mapping=tex-text]{@TimesFont@}
