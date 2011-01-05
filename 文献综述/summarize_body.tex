@@ -44,6 +44,13 @@ and tagging every words like this:
 The/at-tl Fulton/np-tl County/nn-tl Grand/jj-tl Jury/nn-tl said/vbd Friday/nr an/at investigation/nn of/in Atlanta's/np\$ recent/jj primary/jj election/nn produced/vbn "/" no/at evidence/nn "/" that/cs any/dti irregularities/nns took/vbd place/nn ./.
 }
 
+\thisfancyput(-8pt,-25cm){
+\rule{.5pt}{25cm}
+\hspace*{\textwidth}
+\rule{.5pt}{25cm}
+}
+
+
 Tagging a text first require you to have a tag set\footnote{Kinds of token.}.
  Brown Corpus
 % \footnote{参考\url{http://clwww.essex.ac.uk/w3c/corpus_ling/content/corpora/list/private/brown/brown.html}.}
@@ -77,6 +84,13 @@ In HMM, $ Wr $ can be viewed as \emph{Observation symbols}, so $Pr$ is \emph{Hid
 HMM can learned to calculate the most possible value of very $P_i$. Thus, the tagging is achieved
 
 \subsection{Concrete Syntax Tree Generating}
+
+\thisfancyput(-8pt,-25cm){
+\rule{.5pt}{25cm}
+\hspace*{\textwidth}
+\rule{.5pt}{25cm}
+}
+
 
 A concrete syntax tree\cite{cst} or parse tree is an (ordered, rooted) tree that re-presents the syntactic structure of a string according to some formal grammar.
 
@@ -124,6 +138,13 @@ The complete version of the above file can fully describe \emph{The English Lang
 And complete English BNF declaration will probably need \emph{extended} BNF. 
 Many \mbox{extensions} and variants of the original notation are defined, including EBNF\footnote{Extended Backus--Naur Form} and ABNF\footnote{Augmented Backus--Naur Form}.
 
+\thisfancyput(-8pt,-25cm){
+\rule{.5pt}{25cm}
+\hspace*{\textwidth}
+\rule{.5pt}{25cm}
+}
+
+
 Bison\cite{bison} is a general-purpose parser generator that converts a grammar description for an LALR\footnote{An LALR parser is a type of parser defined in computer science as a Look-Ahead LR parser.} context-free grammar into a C program to parse that grammar.
 The grammar description file is very close-to BNF. The  \fbox{\texttt{John hit the ball}}  if written in Bison grammar file should like like this:
 
@@ -163,6 +184,11 @@ N : "ball" \{ \$\$=\{build type N, nodetext=\$1\} \} \\
 The file is not complete, and code in side \{\} is pseudo-code. But, this you can know BNF+bison 
 can really write concrete syntax tree generator. 
 %$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+\thisfancyput(-8pt,-25cm){
+\rule{.5pt}{25cm}
+\hspace*{\textwidth}
+\rule{.5pt}{25cm}
+}
 
 \section{Conclusion: Connect Bison and HMM}
 
@@ -185,6 +211,12 @@ I head that a lot of work has already been done, I just need to re-assembly them
 \subsection{The 3\textsuperscript{rd} Step: Parser with HMM aided part-of-speech tagging}
 
 Finally, put these two parts together, I hope the English language parser program will come to see the word.
+
+\thisfancyput(-8pt,-25cm){
+\rule{.5pt}{25cm}
+\hspace*{\textwidth}
+\rule{.5pt}{25cm}
+}
 
 \section{Bibliography}
 \nocite{GPL}

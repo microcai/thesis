@@ -5,7 +5,7 @@
 
 \usepackage[xetex]{graphicx}
 \usepackage[xdvipdfmx]{pstricks}
-%\usepackage{fancyhdr}
+\usepackage{fancyhdr,fancybox}
 \usepackage{setspace}
 \usepackage{array,makecell,booktabs}
 \usepackage{wrapfig}
@@ -45,16 +45,30 @@
 
 \begin{document}
 
+\thisfancyput(-8pt,-24cm){
+\rule{.5pt}{22cm}
+\hspace*{\linewidth}
+\rule{.5pt}{22cm}
+}
+
+
 \renewcommand{\arraystretch}{1.8}
 
-\input{summarize_table}
 
+\input{summarize_table}
 
 \begin{onehalfspace}
 
 \input{summarize_body}		
 
 \end{onehalfspace}
+
+\thisfancyput(-8pt,-25cm){
+\rule{.5pt}{25cm}
+\hspace*{\textwidth}
+\rule{.5pt}{25cm}
+}
+
 
 \vfill
 \begin{table}[b]
