@@ -40,6 +40,8 @@ AC_ARG_WITH(TimesFont,[AC_HELP_STRING([--with-TimesFont],[font used to set Engli
 
 # Checks for library functions.
 
+AC_CHECK_LIB(fl,yyerror)
+
 AC_SUBST(songti)
 AC_SUBST(songtibold)
 AC_SUBST(monohei)

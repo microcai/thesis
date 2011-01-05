@@ -30,3 +30,7 @@ INSTALL
 install-sh
 .deps/
 stamp-h1
+parser
+*.o
+parser.c
+parser.h

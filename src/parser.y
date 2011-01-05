@@ -6,6 +6,14 @@
  *
  */
  
-/*Let's Define the structure of the sentence*/ 
+/*Let's Define the structure of the sentence*/
 
-Sentence := Sentence 
+%token sentence 
+
+
+%%
+
+Sentence : sentence punct ;
+
+
+punct: '.' '?' ;
