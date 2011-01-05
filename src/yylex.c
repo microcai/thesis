@@ -10,9 +10,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char * yylex()
-{
+#include "common.h"
+#include "parser.h"
 
+//"Jhon Hit The Ball";
+
+int S[] = {Prot , V , Det , N , '.' , 0 , 0};
+char * s[] = { "Jhon" , "Hit" , "The" , "Ball" , "."};
+
+int yylex()
+{
+	static l=0;
+	yylval.word = s[l];
+	return S[l++];
 }
 
 void yyerror(char * errstr)

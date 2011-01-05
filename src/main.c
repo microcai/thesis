@@ -5,8 +5,10 @@
  *      Author: cai
  */
 
+#include "parser.h"
+
 int main()
 {
-
+	yyparse();
 
 }
