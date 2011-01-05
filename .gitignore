@@ -16,3 +16,6 @@ sample.tex
 setup_font.tex
 *~
 machinetranslate.kilepr
+config*
+!configure.ac
+*.cache*
