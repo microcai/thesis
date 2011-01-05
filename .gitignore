@@ -19,3 +19,6 @@ machinetranslate.kilepr
 config*
 !configure.ac
 *.cache*
+*.jpeg
+Makefile
+Makefile.in
