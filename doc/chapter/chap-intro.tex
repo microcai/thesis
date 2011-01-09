@@ -10,22 +10,24 @@ of the words.
 Translate is not a simple mapping from source language to target language.
 In order to do perfect translation, the true meaning of the words must be understood. 
 
-So, what do we mean by \emph{understanding the meaning} ? 
+So, what do we mean by \emph{ understanding the meaning} ? 
 Does a computer program can really understand a text ?
-Think of a compiler\footnote{ A compiler translates one source computer language\footnotemark to another.}.\footnotetext{Usually programming language.}
+Think of a compiler\footnote{ A compiler translates one source computer language\footnotemark to another.}.\footnotetext{ Usually programming language. }
 Does the compiler (like gcc) understand your source code?
 Of course yes.
-Optimization\footnote{Compile can change the code so it runs faster but remains the same functionality. } can only occur when the compiler fully understands the source code.
+Optimization\footnote{ Compile can change the code so it runs faster but remains the same functionality. } can only occur when the compiler fully understands the source code.
 What makes a compiler understand the code? It's AST --- Abstract Syntax Tree.
-To make our program understand the English text, we need to build Concrete Syntax Tree for the English text. Concrete Syntax Tree is very similar to the Abstract Syntax Tree, we'll discuss them later.
+To make our program understand the English text, we need to build Concrete Syntax Tree for the English text.
+Concrete Syntax Tree is very similar to the Abstract Syntax Tree, we'll discuss them later.
+
+When building parser tree, we need to know the grammar of the under-processing language, and tell this grammar to the parser program.
+This can be done by constructing specific parser according to the language.
+But we don't have to write that program piece by piece.
+There's tool kit out there that can automatically do this as long as we provide the BNF\cite{BNF} declaration. We'll discuss BNF later.
+
+In order  to let the automatically parser generating tool works, every word must be tagged with part-of-speech, because BNF declaration use the part-of-speech to distinguish sentence type.
+And there is much way of determining this. We'll discuss them in chapter \ref{chap:HMM_based_tagging}.
 
 
 
-%\LABTP is based on the compiler model. What is a compiler? A translator between
-one computer language to another. A compiler accept well defined computer language
-text, and produce well defined computer language output. The computer language is well
-defined, so it is possible to do lexical analyse. As for human languages? Hmm \ldots\ldots 
-But, wait! Won't we really do lexical analyse on human language?
 
-Well, It's partly possible. Think of English. English is the mostly
-NLP-friendly \footnote{NLP-friendly means, easy to do with Natural Language Processing} human language ever exist.
