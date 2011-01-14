@@ -47,6 +47,15 @@ AC_SUBST(songtibold)
 AC_SUBST(monohei)
 AC_SUBST(heiti)
 AC_SUBST(TimesFont)
-AC_CONFIG_FILES([doc/common/setup_font.tex Makefile src/Makefile doc/Makefile])
+AC_CONFIG_FILES([doc/common/setup_font.tex
+		Makefile
+		src/Makefile
+		doc/Makefile
+		doc/commitment/Makefile
+		doc/thesis/Makefile
+		doc/Topic_Declaration/Makefile
+		doc/Mission_statement/Makefile
+		doc/Opening_report/Makefile
+		doc/Literature_Review/Makefile])
 
 AC_OUTPUT
