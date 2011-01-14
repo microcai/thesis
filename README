@@ -14,3 +14,18 @@ src/ 下面放的就是论文编写阶段撰写的语法分析程序。
 使用 autotools 编译。相信各位 Linuxer 不会陌生的 :)
 
 至于学院么，呵呵，这个论文可不是给你们看的。
+
+下面是两个 host side 的 URL 
+
+http://repo.or.cz/w/microcai-thesis-at-zstu.git
+https://github.com/microcai/thesis
+
+下面的是用于 git clone 的 URL
+
+git://repo.or.cz/microcai-thesis-at-zstu.git
+http://repo.or.cz/r/microcai-thesis-at-zstu.git
+git://github.com/microcai/thesis.git
+https://microcai@github.com/microcai/thesis.git
+
+
+
