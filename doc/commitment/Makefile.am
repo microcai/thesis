@@ -1,16 +1,19 @@
 
+AUTOMAKE_OPTIONS=no-dependencies  
+
+include ../common.mk
+
+
 LATEXSOURCE=承诺书
 
-EXTRA_DIST = $(LATEXSOURCE).tex
-
 $(PDF):$(LATEXSOURCE).tex $(BIBSRC)
-	$(MAKE) clean  compile
-	$(MAKE) compile
-	$(MAKE) compile
-	$(MAKE) compile
+	$(MAKE) clean  
+	$(XeLaTeX) -interaction=nonstopmode $(LATEXSOURCE)
+	$(XeLaTeX) -interaction=nonstopmode $(LATEXSOURCE)
+	$(XeLaTeX) -interaction=nonstopmode $(LATEXSOURCE)
 distdir-local:
 	hah
 
-include ../common.mk
+
 
 # makefile for thesis 

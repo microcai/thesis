@@ -6,10 +6,11 @@ include ../common.mk
 .phone: compile 
 
 $(PDF):$(LATEXSOURCE).tex summarize_table.tex summarize_body.tex $(BIBSRC)
-	$(MAKE) clean  compile
-	$(MAKE) compile
-	$(BiBTeX) $(SOURCE)
-	$(MAKE) compile
-	$(MAKE) compile
+	$(MAKE) clean  
+	$(XeLaTeX) -interaction=nonstopmode $(LATEXSOURCE)
+	$(BiBTeX) $(LATEXSOURCE)
+	$(XeLaTeX) -interaction=nonstopmode $(LATEXSOURCE)
+	$(XeLaTeX) -interaction=nonstopmode $(LATEXSOURCE)
+
 
 # makefile for thesis 

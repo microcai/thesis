@@ -5,9 +5,7 @@ BIBSRC=$(top_builddir)/doc/common/reference.bib
 
 PDF=$(LATEXSOURCE).pdf
 
-
-
-.phone: distdir all pdf-local compile 
+EXTRA_DIST = $(LATEXSOURCE).tex
 
 pdf-local:$(PDF)
 	
@@ -18,6 +16,4 @@ distclean-local:clean
 clean-local:
 	-$(RM) $(INTERMEDIAFILE) $(EXTRA_INTERMEDIAFILE)
 
-compile:
-	$(XeLaTeX) -interaction=nonstopmode $(LATEXSOURCE)
 

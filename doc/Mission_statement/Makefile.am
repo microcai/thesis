@@ -6,8 +6,10 @@ include ../common.mk
 .phone: compile 
 
 $(PDF):$(LATEXSOURCE).tex $(BIBSRC)
-	$(MAKE) clean  compile
-	$(MAKE) compile
-	$(MAKE) compile
+	$(MAKE) clean  
+	$(XeLaTeX) -interaction=nonstopmode $(LATEXSOURCE)
+	$(XeLaTeX) -interaction=nonstopmode $(LATEXSOURCE)
+	$(XeLaTeX) -interaction=nonstopmode $(LATEXSOURCE)
+
 
 # makefile for thesis 
