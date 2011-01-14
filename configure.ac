@@ -1,10 +1,7 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-
-
-
-AC_PREREQ([2.68])
+AC_PREREQ([2.53])
 AC_INIT([G07710219-thesis], [0.0.1], [microcaicai@gmail.com])
 AC_CONFIG_SRCDIR([src/parser.y])
 AC_CONFIG_HEADERS([config.h])
