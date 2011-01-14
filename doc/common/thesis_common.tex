@@ -6,6 +6,8 @@
 \usepackage{CJKnumb}
 \punctstyle{banjiao}
 
+%！！重要！！%这是防止 - -- --- 等特殊符号失去在 LaTeX 下原油的意义。
+\defaultfontfeatures{Mapping=tex-text}
 \input{../common/setup_font}
 
 % For same settings as M$ Word.
@@ -76,8 +78,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
-%！！重要！！%这是防止 - -- --- 等特殊符号失去在 LaTeX 下原油的意义。
-\defaultfontfeatures{Mapping=tex-text}
+
 
 % xeCJK 会处理好中文断行
 \XeTeXlinebreaklocale{en}
