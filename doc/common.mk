@@ -1,3 +1,5 @@
+LaTeX=latex
+PDFLaTeX=pdflatex
 XeLaTeX=xelatex
 BiBTeX=bibtex
 

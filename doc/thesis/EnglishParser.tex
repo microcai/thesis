@@ -1,4 +1,6 @@
 \documentclass[a4paper,12pt]{article}
+\usepackage{mathptmx}
+\usepackage{CJK}
 \usepackage[ urlcolor = blue, colorlinks = true, citecolor = black, linkcolor = black]{hyperref}
 \usepackage{graphicx}
 %\usepackage{xltxtra}
@@ -10,14 +12,14 @@
 \usepackage{array,makecell,tabularx}
 \usepackage{tocloft}
 \usepackage{titlesec}
+\usepackage{amsmath,amssymb}
 
-\input{../common/thesis_common}
+\input{thesis_common}
 
 \title{\entitle}
 \author{\enauthor}
 
 \date{}
-
 \begin{document}
 
 \begin{titlepage}
@@ -25,14 +27,14 @@
 \pagenumbering{roman}
 
 %First Page
+\begin{CJK*}{UTF8}{gbsn}
 \input{../chapter/coverpage}
-
 %承诺书
 \input{../chapter/commitment}
 
 %中英文摘要
-
 \input{../chapter/abstract}
+\end{CJK*}
 
 \end{titlepage}
 
@@ -52,8 +54,12 @@
 % 论文主题
 \input{../chapter/thesis_body}
 
+
 % 参考文献
+\begin{CJK*}{UTF8}{gbsn}
 \input{../chapter/chap-bib}
+\end{CJK*}
+
 
 \section{Acknowledgements}%\stepcounter{section}\addcontentsline{toc}{section}{acknowledgements}
 
@@ -64,11 +70,12 @@
 
 \section*{\begin{center}Appendix\end{center}}\addcontentsline{toc}{section}{Appendix}
 
-
 \input{../chapter/tableofattachment.tex}
 
 \clearpage
 
 \pagestyle{empty}
+\begin{CJK*}{UTF8}{gbsn}
 \input{../chapter/thanks}
+\end{CJK*}
 \end{document}

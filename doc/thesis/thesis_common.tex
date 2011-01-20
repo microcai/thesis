@@ -1,16 +1,10 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Must use CM font by default, and don't change math font
-\usepackage[cm-default,no-math,quiet]{fontspec}
 % For using Chinese
-\usepackage[SlantFont,CJKnumber]{xeCJK}
 \usepackage{CJKnumb}
+\usepackage{CJKpunct}
+
 \punctstyle{banjiao}
-
-%！！重要！！%这是防止 - -- --- 等特殊符号失去在 LaTeX 下原有的意义。
-\defaultfontfeatures{Mapping=tex-text}
-\input{../common/setup_font}
-
 
 % For same settings as M$ Word.
 \usepackage[top=2.5cm,left=2.5cm,bottom=2cm,right=2cm]{geometry}
@@ -79,12 +73,6 @@
 \newenvironment{centerlastline}{\leftskip0pt plus.5fil \rightskip0pt plus-.5fil \parfillskip0pt plus1fil \relax\parindent 2em\par}{\par}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-
-
-
-% xeCJK 会处理好中文断行
-\XeTeXlinebreaklocale{en}
-%\XeTeXlinebreakskip=0ex minus 0.5ex plus 1ex 
 
 % 中文日期
 \newcommand{\CJKtoday}{\number\year 年 \number\month 月 \number\day 日}
