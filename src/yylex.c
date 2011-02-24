@@ -29,7 +29,7 @@ int yylex()
 	xmlNodePtr cur = xmlNewNode(NULL,typetostr(S[l]));
 	xmlNodeAddContent(cur,s[l]);
 
-	yylval.node = cur;
+	yylval  = cur;
 	return S[l++];
 }
 

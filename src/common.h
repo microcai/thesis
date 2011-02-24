@@ -11,18 +11,11 @@
 #include <libxml/tree.h>
 
 #define YYINITDEPTH	1024
-#define YYSTYPE yystype
+#define YYSTYPE xmlNodePtr
 
 enum	yyexttype{
 	NP	=	1024 ,
 	VP,
-};
-
-typedef struct yystype yystype;
-
-struct yystype{
-	 xmlNodePtr	node;
-	 int type;
 };
 
 const char * typetostr(int yytokentype);

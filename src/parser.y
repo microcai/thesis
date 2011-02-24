@@ -8,9 +8,10 @@
  *
  */
 
- #include <stdio.h>
- #include "common.h"
- 
+#include <stdio.h>
+#include "common.h"
+#include "parser_c.h"
+
 
 %}
 
@@ -43,11 +44,12 @@ VP : V NP {
 	 };
 
 NP : Det N  {
+		$0 = build_NP_N_P($1,$2);
 					  
 				} 
 	| Prot {
- 			 	
-			  }
+ 		$0 = $1; 		
+ 		}
 	;
 	
 	
