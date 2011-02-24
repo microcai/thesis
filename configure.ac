@@ -11,6 +11,7 @@ AM_INIT_AUTOMAKE([-Wall])
 AC_PROG_INSTALL
 AC_PROG_CC
 AC_PROG_YACC # Bison detect, ^_^
+PKG_PROG_PKG_CONFIG
 
 ## Default font settings
 songti="Adobe Song Std"
@@ -30,13 +31,12 @@ AC_ARG_WITH(heiti,[AC_HELP_STRING([--with-heiti],[font used to set CJK heiti fon
 AC_ARG_WITH(TimesFont,[AC_HELP_STRING([--with-TimesFont],[font used to set English Times font.default is Nimbus Roman No9 L(type1)])],[],[])
 
 # Checks for libraries.
-
+PKG_CHECK_MODULES([XML2],[libxml-2.0])
 # Checks for header files.
 
 # Checks for typedefs, structures, and compiler characteristics.
 
 # Checks for library functions.
-
 AC_CHECK_LIB(fl,yyerror)
 
 AC_SUBST(songti)

@@ -9,19 +9,27 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <libxml/xpath.h>
+
 
 #include "common.h"
 #include "parser.h"
 
+
 //"Jhon Hit The Ball";
 
 int S[] = {Prot , V , Det , N , '.' , 0 , 0};
+
 char * s[] = { "Jhon" , "Hit" , "The" , "Ball" , "."};
 
 int yylex()
 {
 	static l=0;
-	yylval.word = s[l];
+
+	xmlNodePtr cur = xmlNewNode(NULL,typetostr(S[l]));
+	xmlNodeAddContent(cur,s[l]);
+
+	yylval.node = cur;
 	return S[l++];
 }
 

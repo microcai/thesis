@@ -8,6 +8,8 @@
 #ifndef COMMON_H_
 #define COMMON_H_
 
+#include <libxml/tree.h>
+
 #define YYINITDEPTH	1024
 #define YYSTYPE yystype
 
@@ -19,18 +21,10 @@ enum	yyexttype{
 typedef struct yystype yystype;
 
 struct yystype{
+	 xmlNodePtr	node;
 	 int type;
-	 char * word;
-	 union{
-		 struct type_VP{
-			 yystype * V,*NP;
-		 }type_VP;
-		 struct type_NP{
-			 yystype * Det;
-			 yystype *NP;
-		 }type_NP;
-	 }t;
 };
 
+const char * typetostr(int yytokentype);
 
 #endif /* COMMON_H_ */
