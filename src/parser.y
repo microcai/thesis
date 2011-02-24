@@ -39,17 +39,21 @@ sentence : NP VP {
 
 VP : V NP {
 
-
+	$0 = build_VP_V_NP($1,$2);
 
 	 };
 
-NP : Det N  {
-		$0 = build_NP_N_P($1,$2);
-					  
-				} 
+NP : Det NP  {
+		$0 = build_NP_N_NP($1,$2);					  
+			}
+			 
 	| Prot {
  		$0 = $1; 		
  		}
+ 		
+ 	| N {
+ 		$0 = $1;
+ 	}	
 	;
 	
 	

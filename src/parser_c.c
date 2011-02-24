@@ -14,11 +14,21 @@
 #include "parser.h"
 #include "parser_c.h"
 
-xmlNodePtr build_NP_N_P(xmlNodePtr pN, xmlNodePtr pP)
+xmlNodePtr build_NP_N_NP(xmlNodePtr pN, xmlNodePtr pNP)
 {
 	xmlNodePtr ret;
-	ret = pN->parent = pP->parent = xmlNewNode(NULL,typetostr(NP));
+	ret = pN->parent = pNP->parent = xmlNewNode(NULL,typetostr(NP));
 	xmlAddChild(ret,pN);
-	xmlAddChild(ret,pP);
+	xmlAddChild(ret,pNP);
 	return ret;
 }
+
+xmlNodePtr build_VP_V_NP(xmlNodePtr pV, xmlNodePtr pNP)
+{
+	xmlNodePtr ret;
+	ret = pV->parent = pNP->parent = xmlNewNode(NULL,typetostr(VP));
+	xmlAddChild(ret,pV);
+	xmlAddChild(ret,pNP);
+	return ret;
+}
+

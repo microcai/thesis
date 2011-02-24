@@ -8,6 +8,8 @@
 #ifndef PARSER_C_H_
 #define PARSER_C_H_
 
-xmlNodePtr build_NP_N_P(xmlNodePtr pN, xmlNodePtr pP);
+xmlNodePtr build_NP_N_NP(xmlNodePtr pN, xmlNodePtr pP);
+xmlNodePtr build_VP_V_NP(xmlNodePtr pV, xmlNodePtr pNP);
+
 
 #endif /* PARSER_C_H_ */
