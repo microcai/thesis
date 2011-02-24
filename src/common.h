@@ -14,7 +14,8 @@
 #define YYSTYPE xmlNodePtr
 
 enum	yyexttype{
-	NP	=	1024 ,
+	sentence = 1024,
+	NP,
 	VP,
 };
 

@@ -25,7 +25,12 @@
 
 %%
 
-Sentence : sentence punct ;
+Sentence : sentence punct {
+
+			//outputsentence
+			output_sentence($1,$2);			
+
+		};
 
 
 punct: '.'| '?' ;
@@ -33,26 +38,27 @@ punct: '.'| '?' ;
 
 sentence : NP VP {
 
-					};
+		$$ = build_sentence_NP_VP($1,$2);
+		
+	};
 					
 					
 
 VP : V NP {
-
-	$0 = build_VP_V_NP($1,$2);
+		$$ = build_VP_V_NP($1,$2);
 
 	 };
 
 NP : Det NP  {
-		$0 = build_NP_N_NP($1,$2);					  
+		$$ = build_NP_N_NP($1,$2);					  
 			}
 			 
 	| Prot {
- 		$0 = $1; 		
+ 		$$ = $1; 		
  		}
  		
  	| N {
- 		$0 = $1;
+ 		$$ = $1;
  	}	
 	;
 	

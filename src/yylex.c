@@ -24,10 +24,11 @@ char * s[] = { "Jhon" , "Hit" , "The" , "Ball" , "."};
 
 int yylex()
 {
-	static l=0;
+	static int l=0;
 
 	xmlNodePtr cur = xmlNewNode(NULL,typetostr(S[l]));
-	xmlNodeAddContent(cur,s[l]);
+	cur->content = xmlMemoryStrdup(s[l]);
+	xmlNodeSetContent(cur,s[l]);
 
 	yylval  = cur;
 	return S[l++];

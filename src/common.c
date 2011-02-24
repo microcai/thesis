@@ -27,5 +27,9 @@ const char * typetostr(int yytokentype)
 		return "NP";
 	case VP:
 		return "VP";
+	case sentence:
+		return "sentence";
+	default:
+		return "";
 	}
 }
