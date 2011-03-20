@@ -46,10 +46,5 @@ xmlNodePtr build_sentence_NP_VP(xmlNodePtr pNP, xmlNodePtr pVP)
 
 void output_sentence(xmlNodePtr sentence, xmlNodePtr punct)
 {
-	xmlSaveCtxtPtr saver = 	xmlSaveToFd(2,"UTF-8",0);
 
-	xmlSaveTree(saver,sentence);
-	xmlSaveFlush(saver);
-	xmlSaveClose(saver);
-	write(2,"\n",1);
 }

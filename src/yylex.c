@@ -15,23 +15,58 @@
 #include "common.h"
 #include "parser.h"
 
+static GSList * token_list = NULL;
+static GSList * type_list = NULL;
 
-//"Jhon Hit The Ball";
+#if 1
 
-int S[] = {Prot , V , Det , N , '.' , 0 , 0};
+void init_yylex(gchar ** tokens)
+{
+	/*
+	gchar ** token = tokens;
+	while(token)
+	{
+		token_list = g_slist_append(token_list,token++);
+	}
+	*/
 
-char * s[] = { "Jhon" , "Hit" , "The" , "Ball" , "."};
+	//"Jhon Hit The Ball .";
+
+	token_list = g_slist_append(token_list,"Jhon");
+	token_list = g_slist_append(token_list,"Hit");
+	token_list = g_slist_append(token_list,"The");
+	token_list = g_slist_append(token_list,"Ball");
+	token_list = g_slist_append(token_list,".");
+	token_list = g_slist_append(token_list,"");
+
+
+	type_list = g_slist_append(type_list,GINT_TO_POINTER(Prot));
+	type_list = g_slist_append(type_list,GINT_TO_POINTER(V));
+	type_list = g_slist_append(type_list,GINT_TO_POINTER(Det));
+	type_list = g_slist_append(type_list,GINT_TO_POINTER(N));
+	type_list = g_slist_append(type_list,GINT_TO_POINTER('.'));
+	type_list = g_slist_append(type_list,GINT_TO_POINTER(0));
+
+}
+#endif
 
 int yylex()
 {
-	static int l=0;
+	int ret;
 
-	xmlNodePtr cur = xmlNewNode(NULL,typetostr(S[l]));
-	cur->content = xmlMemoryStrdup(s[l]);
-	xmlNodeSetContent(cur,s[l]);
+	GSList * curtoken = g_slist_nth(token_list,0);
+	GSList * curtype = g_slist_nth(type_list,0);
+
+	xmlNodePtr cur = xmlNewNode(NULL,typetostr( GPOINTER_TO_INT(curtype->data) ));
+	cur->content = xmlMemoryStrdup(curtoken->data);
+	xmlNodeSetContent(cur,curtoken->data);
 
 	yylval  = cur;
-	return S[l++];
+	ret = GPOINTER_TO_INT(curtype->data);
+
+	token_list = g_slist_delete_link(token_list,curtoken);
+	type_list = g_slist_delete_link(type_list,curtype);
+	return ret;
 }
 
 void yyerror(char * errstr)

@@ -4,7 +4,6 @@
 AC_PREREQ([2.53])
 AC_INIT([G07710219-thesis], [0.0.1], [microcaicai@gmail.com])
 AC_CONFIG_SRCDIR([src/parser.y])
-AC_CONFIG_HEADERS([config.h])
 
 AM_INIT_AUTOMAKE([-Wall])
 # Checks for programs.
@@ -31,7 +30,7 @@ AC_ARG_WITH(heiti,[AC_HELP_STRING([--with-heiti],[font used to set CJK heiti fon
 AC_ARG_WITH(TimesFont,[AC_HELP_STRING([--with-TimesFont],[font used to set English Times font.default is Nimbus Roman No9 L(type1)])],[],[])
 
 # Checks for libraries.
-PKG_CHECK_MODULES([XML2],[libxml-2.0])
+PKG_CHECK_MODULES([PARSER],[libxml-2.0 glib-2.0])
 # Checks for header files.
 
 # Checks for typedefs, structures, and compiler characteristics.

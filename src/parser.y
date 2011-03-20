@@ -28,7 +28,8 @@
 Sentence : sentence punct {
 
 			//outputsentence
-			output_sentence($1,$2);			
+			output_sentence($1,$2);
+			*(xmlNodePtr*)YYPARSE_PARAM = $1 ;
 
 		};
 

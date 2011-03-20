@@ -4,9 +4,6 @@
  *  Created on: 2011-2-24
  *      Author: cai
  */
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
 
 #include "common.h"
 #include "parser.h"
